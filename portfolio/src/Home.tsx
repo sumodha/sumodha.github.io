@@ -1,9 +1,10 @@
 
 import Card from './Card.tsx'
+
 function Home() {
     return (
     <>
-    <Card imgSrc="hello" title="ttlole" subtitle = "subtitleeke" hasGithubLink={false} tags = {["hello"]}></Card>
+    <Card imgSrc={"reactcopy.svg"} title="ttlole" subtitle = "subtitleeke" githubLink="https://github.com" externalLink="" text = "blah blach blahahahdhdhdh" tags = {[{name: "test", type: "languages"}]}></Card>
     </>
     );
 }
