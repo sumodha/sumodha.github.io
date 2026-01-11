@@ -1,5 +1,8 @@
+import {cards} from './cards.tsx'
+
+
 const skills = {
-    langauges: new Set<String>(),
+    languages: new Set<String>(),
     frameworks: new Set<String>(),
     libraries: new Set<String>(),
     "developer tools & platforms": new Set<String>()
@@ -7,15 +10,28 @@ const skills = {
 
 type SkillType = keyof typeof skills;
 
+for (const card of cards){
+    const card_skills = card.skills
+    for (const [category, values] of Object.entries(card_skills)) {
+        if (category in skills) {
+            for (const value of values) {
+                skills[category as SkillType].add(value)
+            }
+            
+        }
+    }
+}
+
+
 type SkillProps = {
     name: string, 
-    type: SkillType 
+    type: SkillType
 }
+
 function Skill({name, type}: SkillProps) {
-    skills[type].add(name)
     return (
         <div className = {type}>{name}</div>
     );
 }
 
-export {Skill}
+export {skills, Skill}
