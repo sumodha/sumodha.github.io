@@ -29,8 +29,8 @@ function Card({imgSrc, title, subtitle, githubLink, externalLink, text, skills} 
     <div id = "header">
     <h3>{title}</h3>
     <div id = "links">
-    {githubLink?<a href={githubLink}><Icon name="github"  color="red"></Icon></a>:<Icon name="github" size={100}  color="gray"></Icon>}
-    {externalLink?<a href={externalLink}><Icon name="external"  color="blue"></Icon></a>:<Icon name="external" size={100} color="gray"></Icon>}
+    {githubLink?<a href={githubLink}><Icon name="github-card" ></Icon></a>:<Icon name="github"  color="gray"></Icon>}
+    {externalLink?<a href={externalLink}><Icon name="external"  ></Icon></a>:<Icon name="external"  color="gray"></Icon>}
     </div>
     </div>
     <h4>{subtitle}</h4>

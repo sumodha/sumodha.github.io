@@ -2,10 +2,10 @@ import {cards} from './cards.tsx'
 
 
 const skills = {
-    languages: new Set<String>(),
-    frameworks: new Set<String>(),
-    libraries: new Set<String>(),
-    "developer tools & platforms": new Set<String>()
+    languages: new Set<string>(),
+    frameworks: new Set<string>(),
+    libraries: new Set<string>(),
+    "developer tools & platforms": new Set<string>()
 }
 
 type SkillType = keyof typeof skills;
