@@ -1,0 +1,47 @@
+.languages{
+    display: inline-block;
+    background-color: #485696;
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-right: 6px;
+
+}
+.frameworks{
+    display: inline-block;
+    background-color: #5497A7;
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-right: 6px;
+
+}
+.libraries{
+    display: inline-block;
+    background-color: #B48EAE;
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-right: 6px;
+
+}
+.developer {
+   display: inline-block;
+    background-color: #CC5A71;
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin-right: 6px; 
+}

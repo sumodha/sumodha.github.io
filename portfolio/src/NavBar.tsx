@@ -1,5 +1,6 @@
 import {Icon} from './utils/icon-util.tsx'
 import {Link} from 'react-router-dom'
+import './NavBar.css'
 
 
 type refsProps= {
@@ -18,12 +19,12 @@ function NavBar({refs}: {refs: refsProps}) {
     }
     return (
         <nav>
-            <ul >
+            <ul className="icons">
                 <li><a><Icon name="linkedIn" ></Icon></a></li>
                 <li><a><Icon name="github" ></Icon></a></li>
                 <li><a><Icon name="mail"></Icon></a></li>
             </ul>
-            <ul>
+            <ul className="links">
                 <li><Link to="/" onClick={() => window.scrollTo({top:0, behavior:"smooth"})}>home</Link></li>
                 <li><Link to="/" onClick={()=>scrollTo('skills')}>skills</Link></li>
                 <li><Link to="/" onClick={()=>scrollTo('work')}>work</Link></li>

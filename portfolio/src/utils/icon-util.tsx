@@ -21,7 +21,7 @@ type IconProps = {
 }
 
 // function that creates a svg icon based on name, size, and fill color
-function Icon({name, size="40px", color="black"}:IconProps) {
+function Icon({name, size="30px", color="white"}:IconProps) {
     const Svg = icons[name];
 
     return (

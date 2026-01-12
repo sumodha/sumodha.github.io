@@ -4,7 +4,7 @@ import {cards} from './utils/cards.tsx'
 import NavBar from './NavBar.tsx'
 import {skills, Skill} from './utils/skill-util.tsx'
 import {useRef} from 'react'
-
+import './Home.css'
 
 
 function Home() {
@@ -24,21 +24,32 @@ function Home() {
     return (
     <>
     <NavBar refs = {refs}></NavBar>
+    <div>
     <h1>Sumodha Pokhrel</h1>
-    <h2>Software Developer | CS @ Rice University</h2>
+    <h2 id="title">Software Developer | CS @ Rice University</h2>
     <section id="skills" ref={skillsRef}>
-    <h2>Skills</h2>
-    <h3>Languages</h3>
+    <h2>skills</h2>
+    <h3 id="skills-category-1">languages</h3>
+    <div className="skills">
     {Array.from(skills.languages).map((element,idx) => <Skill key={idx} name={element} type="languages"></Skill>)}
-    <h3>Frameworks</h3>
+    </div>
+    <h3 className="skills-category">frameworks</h3>
+    <div className="skills">
     {Array.from(skills.frameworks).map((element,idx) => <Skill key={idx} name={element} type="frameworks"></Skill>)}
-    <h3>Libraries</h3>
+    </div>
+    <h3 className="skills-category">libraries</h3>
+    <div className="skills">
     {Array.from(skills.libraries).map((element,idx) => <Skill key={idx} name={element} type="libraries"></Skill>)}
-    <h3>Developer Tools & Platforms</h3>
-    {Array.from(skills['developer tools & platforms']).map((element,idx) => <Skill key={idx} name={element} type="developer tools & platforms"></Skill>)}
+    </div>
+    <h3 className="skills-category">developer tools & platforms</h3>
+    <div className="skills">
+    {Array.from(skills.developer).map((element,idx) => <Skill key={idx} name={element} type="developer"></Skill>)}
+    </div>
     </section>
+    
     <section id="work" ref={workRef}>
-    <h2>Work Experience</h2>
+    <h2>work experience</h2>
+    <div className="cards">
     {cards.map((element, idx) => element.type=="work" ? 
     <Card 
     key ={idx}
@@ -50,9 +61,11 @@ function Home() {
     text = {element.text}
     skills = {element.skills}>
     </Card>:<></>)}
+    </div>
     </section>
     <section id="leadership" ref={leadershipRef}>
-    <h2>Leadership Experience</h2>
+    <h2>leadership experience</h2>
+    <div className="cards">
     {cards.map((element, idx) => element.type=="leadership" ? 
     <Card 
     key ={idx}
@@ -64,9 +77,11 @@ function Home() {
     text = {element.text}
     skills = {element.skills}>
     </Card>:<></>)}
+    </div>
     </section>
     <section id="projects" ref={projectsRef}>
-    <h2>Passion Projects</h2>
+    <h2>passion projects</h2>
+    <div className="cards">
     {cards.map((element, idx) => element.type=="projects" ? 
     <Card 
     key ={idx}
@@ -78,7 +93,9 @@ function Home() {
     text = {element.text}
     skills = {element.skills}>
     </Card>:<></>)}
+    </div>
     </section>
+    </div>
     </>
     );
 }
