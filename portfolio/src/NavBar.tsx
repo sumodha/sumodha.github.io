@@ -20,9 +20,9 @@ function NavBar({refs}: {refs: refsProps}) {
     return (
         <nav>
             <ul className="icons">
-                <li><a><Icon name="linkedIn" ></Icon></a></li>
-                <li><a><Icon name="github" ></Icon></a></li>
-                <li><a><Icon name="mail"></Icon></a></li>
+                <li><a href = "https://www.linkedin.com/in/sumodha/"><Icon name="linkedIn" ></Icon></a></li>
+                <li><a href = "https://github.com/sumodha" ><Icon name="github" ></Icon></a></li>
+                <li><a href = "mailto:pokhrel.sumodha@gmail.com"><Icon name="mail"></Icon></a></li>
             </ul>
             <ul className="links">
                 <li><Link to="/" onClick={() => window.scrollTo({top:0, behavior:"smooth"})}>home</Link></li>
