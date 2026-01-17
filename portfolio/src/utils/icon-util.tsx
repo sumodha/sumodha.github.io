@@ -3,6 +3,7 @@ import GithubIcon from '../assets/github.svg?react'
 import MailIcon from '../assets/mail.svg?react'
 import LinkedInIcon from '../assets/linkedin.svg?react'
 import GithubCardIcon from '../assets/github-card.svg?react'
+import "./Icon.css";
 
 
 const icons = {
@@ -23,7 +24,7 @@ type IconProps = {
 // function that creates a svg icon based on name, size, and fill color
 function Icon({name, size="30px", color="white"}:IconProps) {
     const Svg = icons[name];
-
+    <a></a>
     return (
         <Svg width={size} height={size} style={{ fill: color}}>
 

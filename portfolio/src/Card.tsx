@@ -25,7 +25,7 @@ function Card({imgSrc, title, subtitle, githubLink, externalLink, text, skills} 
     
     return (
     <div className="card">
-    <img width={400} height={225} src={getImageURL(imgSrc)}/>
+    <img src={getImageURL(imgSrc)}/>
     <div id = "header">
     <h3>{title}</h3>
     <div id = "links">

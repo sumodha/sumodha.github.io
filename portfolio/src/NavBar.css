@@ -1,13 +1,15 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 7px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+
     background-color: #5E503F;
     position: fixed;
     top: 0;
     left:  0;
     width:100%;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     z-index: 1000;
 
 }
@@ -30,6 +32,10 @@ nav li{
     align-items: center;
     padding-left: 7px;
     padding-right: 7px;
+    transition: transform 0.2s ease; /* smooth animation */
+}
+nav li:hover{
+    transform: scale(1.1); /* grow 10% */
 }
 nav a {
     text-decoration: none;

@@ -1,6 +1,8 @@
 @import "@fontsource/roboto/700.css";
+@import "@fontsource/roboto/700-italic.css";
+
 :root {
-  font-family: 'Roboto' ;
+  font-family: 'Roboto' , sans-serif;
 
   color: #5E503F;
   background-color: white;

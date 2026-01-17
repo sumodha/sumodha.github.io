@@ -1,0 +1,6 @@
+svg{
+    transition: transform 0.2s ease; /* smooth animation */
+}
+svg:hover{
+    transform: scale(1.1); /* grow 10% */
+}

@@ -1,12 +1,15 @@
 .card{
     max-width: 400px;
-    max-height: 500px;
     display:flex;
     flex-direction: column;
 }
 img {
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    width: 400px;
+    height: 225px; 
+    object-fit: cover;        /* scales & crops to fill the box */
+    object-position: center;
 }
 
 #header{
@@ -23,8 +26,8 @@ h3{
 }
 h4{
     font-size: 14px;
-    font-style: italic;
     margin: 0px;
+    font-style: italic;
     text-align: left;
 }
 p {

@@ -25,8 +25,10 @@ function Home() {
     <>
     <NavBar refs = {refs}></NavBar>
     <div>
+    <section id="heading">
     <h1>Sumodha Pokhrel</h1>
     <h2 id="title">Software Developer | CS @ Rice University</h2>
+    </section>
     <section id="skills" ref={skillsRef}>
     <h2>skills</h2>
     <h3 id="skills-category-1">languages</h3>
