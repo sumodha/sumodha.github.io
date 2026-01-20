@@ -128,8 +128,8 @@ const cards = [
         imgSrc: "thyroiddx.png", 
         title:"thyroidDx", 
         subtitle: "", 
-        githubLink: "https://github.com", 
-        externalLink: "", 
+        githubLink: "https://github.com/sumodha/thyroidDx", 
+        externalLink: "https://thyroiddx.onrender.com", 
         text: "a full-stack app that gives patient thyroid disease predictions based on routine blood-work tests with 97% model (neural network) accuracy", 
         skills: {
             languages: ["Python"],
@@ -143,7 +143,7 @@ const cards = [
         title:"digits", 
         subtitle: "", 
         githubLink: "https://github.com/sumodha/digits", 
-        externalLink: "", 
+        externalLink: "https://sumodha-digits.onrender.com/", 
         text: "a full-stack application that recreates the New York Times Digits game after its discontinuation", 
         skills: {
             languages: ["JavaScript"],
