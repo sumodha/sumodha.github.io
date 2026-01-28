@@ -143,7 +143,7 @@ const cards = [
         title:"digits", 
         subtitle: "", 
         githubLink: "https://github.com/sumodha/digits", 
-        externalLink: "https://sumodha-digits.onrender.com/", 
+        externalLink: "https://nytdigits.onrender.com/", 
         text: "a full-stack application that recreates the New York Times Digits game after its discontinuation", 
         skills: {
             languages: ["JavaScript"],
