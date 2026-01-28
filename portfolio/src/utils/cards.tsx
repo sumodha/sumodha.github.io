@@ -170,7 +170,7 @@ const cards = [
         title:"10143 AERO Robotics", 
         subtitle: "Programmer", 
         githubLink: "https://github.com/auriyoyo/FTC2024", 
-        externalLink: "", 
+        externalLink: "https://www.youtube.com/@aerorobotics9850", 
         text: "an autonomous robot for the First Tech Challenge (FTC) Centerstage season", 
         skills: {
             languages: ["Java"],
