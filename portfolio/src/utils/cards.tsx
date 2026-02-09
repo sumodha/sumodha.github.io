@@ -29,6 +29,20 @@ const cards = [
     },
     {
         type: "work",
+        imgSrc: "sprout.png", 
+        title:"Sprout", 
+        subtitle: "Software Developer | Aug 2025 - Present", 
+        githubLink: "", 
+        externalLink: "", 
+        text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
+        skills: {
+            languages: ["Python", "Javascript"],
+            frameworks: ["React Native","PostgreSQL", "Flask"],
+            developer: ["Docker"]
+        }
+    },
+    {
+        type: "work",
         imgSrc: "dudoklab.png", 
         title:"Baylor College of Medicine", 
         subtitle: "Computational Research Assistant | May - Aug 2025", 
