@@ -1,0 +1,29 @@
+:root {
+  font-family: 'Helvetica', system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@font-face {
+  font-family: 'Canela';
+  src: url('./assets/fonts/canela/Canela-MediumItalic-Trial.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('./assets/fonts/helvetica/Helvetica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

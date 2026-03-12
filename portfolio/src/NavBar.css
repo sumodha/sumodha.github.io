@@ -1,0 +1,26 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: baseline;
+
+}
+.navbar-name{
+    font-size: 1.5rem;
+
+}
+
+.navbar-links{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    padding: 0px;
+    
+}
+
+.navbar-link{
+    margin: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
