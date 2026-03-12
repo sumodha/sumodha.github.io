@@ -1,5 +1,6 @@
 import NavBar from "./NavBar.tsx";
 import HomeSection from "./HomeSection.tsx";
+import SkillsSection from "./SkillsSection.tsx";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <NavBar></NavBar>
       <HomeSection></HomeSection>
+      <SkillsSection></SkillsSection>
     </>
   )
 }
