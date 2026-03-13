@@ -1,7 +1,9 @@
-.skills-title{
+#skills-title{
     font-size: 5rem;
+    text-align: center;
 }
 .skills-subtitle{
     font-family: 'Canela';
     font-size: 3rem;
+
 }

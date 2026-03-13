@@ -1,14 +1,10 @@
-import NavBar from "./NavBar.tsx";
-import HomeSection from "./HomeSection.tsx";
-import SkillsSection from "./SkillsSection.tsx";
+import HomePage from './HomePage.tsx';
 
 function App() {
 
   return (
     <>
-      <NavBar></NavBar>
-      <HomeSection></HomeSection>
-      <SkillsSection></SkillsSection>
+      <HomePage></HomePage>
     </>
   )
 }
