@@ -1,12 +1,16 @@
 import './Skill.css';
-import { FaReact } from "react-icons/fa";
+import { type IconType } from "react-icons";
 
-function Skill () {
+type SkillProps = {
+    icon: IconType, 
+    title: string
+}
+function Skill ({icon : Icon, title} : SkillProps) {
     return (
-        <>
-        <FaReact size={75}></FaReact>
-        <h3 className="skill-title">REACT</h3>
-        </>
+        <div className="skill">
+        <Icon size={77}></Icon>
+        <h3 className="skill-title">{title}</h3>
+        </div>
     );
 }
 
