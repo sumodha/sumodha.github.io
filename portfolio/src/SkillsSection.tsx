@@ -44,6 +44,8 @@ function SkillsSection({skillsRef}: skillsRefProps) {
     return (
         <>
         <h1 id = 'skills-title' ref={skillsRef}>SKILLS</h1>
+        <div className = "skills-section">
+        <div className = "skills-column">
         <h2 className = 'skills-subtitle'>Frameworks</h2>
         <div className="skills-frameworks">
             <Skill icon = {FaReact} title = "REACT"></Skill>
@@ -65,6 +67,8 @@ function SkillsSection({skillsRef}: skillsRefProps) {
             <Skill icon = {BiLogoTypescript} title = "TYPESCRIPT"></Skill>
             <Skill icon = {DiPostgresql} title = "POSTGRESQL"></Skill>
         </div>
+        </div>
+        <div className = "skills-column">
         <h2 className = 'skills-subtitle'>Developer Tools & Platforms</h2>
         <div className="skills-developer"> 
             <Skill icon = {FaFigma} title = "FIGMA"></Skill>
@@ -85,7 +89,9 @@ function SkillsSection({skillsRef}: skillsRefProps) {
             <h3 className="skill-title">PANDAS</h3>
 
         </div>
+        </div>
         
+        </div>
         </>
     );
 }

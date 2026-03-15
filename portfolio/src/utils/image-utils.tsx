@@ -1,5 +1,5 @@
 function getImageURL(name: string){
-    return new URL(`../assets/${name}`, import.meta.url).href
+    return new URL(`../assets/portfolio/${name}`, import.meta.url).href
 }
 
 export {getImageURL};
