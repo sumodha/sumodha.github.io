@@ -161,7 +161,7 @@ const cards = [
     {
         type: "projects",
         imgSrc: "aero.jpeg", 
-        title:"BowBot", 
+        title:"bowbot", 
         role: "PROGRAMMER", 
         githubLink: "https://github.com/auriyoyo/FTC2024", 
         externalLink: "https://www.youtube.com/@aerorobotics9850", 

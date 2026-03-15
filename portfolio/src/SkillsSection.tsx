@@ -53,18 +53,20 @@ function SkillsSection({skillsRef}: skillsRefProps) {
             <Skill icon = {SiExpress} title = "EXPRESSJS"></Skill>
             <Skill icon = {FaNodeJs} title = "NODEJS"></Skill>
             <Skill icon = {TbBrandReactNative} title = "REACT NATIVE"></Skill>
-            <Skill icon = {BiLogoFlask} title = "FLASK"></Skill>
+            <Skill icon = {BiLogoMongodb} title = "MONGODB"></Skill>
             <Skill icon = {SiFastapi} title = "FASTAPI"></Skill>
             <Skill icon = {SiDjango} title = "DJANGO"></Skill>
-            <Skill icon = {BiLogoMongodb} title = "MONGODB"></Skill>
             <Skill icon = {DiPostgresql} title = "POSTGRESQL"></Skill>
+            <Skill icon = {BiLogoFlask} title = "FLASK"></Skill>
+            
         </div>
         <h2 className = 'skills-subtitle'>Languages</h2>
         <div className='skills-languages'> 
             <Skill icon = {FaPython} title = "PYTHON"></Skill>
-            <Skill icon = {FaJava} title = "JAVA"></Skill>
-            <Skill icon = {TbBrandJavascript} title = "JAVASCRIPT"></Skill>
             <Skill icon = {BiLogoTypescript} title = "TYPESCRIPT"></Skill>
+            <Skill icon = {TbBrandJavascript} title = "JAVASCRIPT"></Skill>
+            <Skill icon = {FaJava} title = "JAVA"></Skill>
+            
             <Skill icon = {DiPostgresql} title = "POSTGRESQL"></Skill>
         </div>
         </div>

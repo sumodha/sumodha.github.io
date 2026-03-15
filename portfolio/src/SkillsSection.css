@@ -18,11 +18,42 @@
     grid-template-columns: repeat(5, max-content);
     gap: 2rem;
 }
-.skills-languages, .skills-developer {
-    display: flex;
+.skills-languages {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
     gap: 2rem;
+}
+
+.skills-developer {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 2rem;
+}
+.skills-libraries .skill-title{
+    text-align: left;
 }
 .skills-libraries .skill-title {
     margin-block-start: 0.7rem;
     margin-block-end: 0.7rem;
+  
+}
+
+@media (max-width: 750px) {
+    .skills-frameworks {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        justify-items: center;
+    }
+
+   
+    .skills-languages {
+        grid-template-columns: repeat(3, max-content);
+        gap: 1.2rem;
+    }
+
+    .skills-developer {
+        grid-template-columns: repeat(4, max-content);
+        gap: 1.2rem;
+    }
+
 }
