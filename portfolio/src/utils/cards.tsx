@@ -18,7 +18,7 @@ const cards = [
         githubLink: "https://github.com/OWL-SUITS-2025/Owl_SUITS_2025", 
         externalLink: "https://www.nasa.gov/centers-and-facilities/johnson/nasa-challenge-wraps-student-teams-complete-space-suit-challenges/", 
         text: "built an AR interface for NASA that tracks crew, and scientific assets and optimizes navigation, geologic sampling and EVA tasks to reduce cognitive load on astronaunts", 
-        date: "AUG 2024 - Present",
+        date: "AUG 2024 - PRESENT",
         skills: ["C#", "MRTK3", "Unity", "Figma", "Agile"]
     },
     {
