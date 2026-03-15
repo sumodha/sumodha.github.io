@@ -39,21 +39,30 @@
 }
 
 @media (max-width: 750px) {
+    .skills-subtitle{
+        text-align: center;
+    }
     .skills-frameworks {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.2rem;
-        justify-items: center;
+        justify-content: center;
     }
 
    
     .skills-languages {
         grid-template-columns: repeat(3, max-content);
         gap: 1.2rem;
+        justify-content: center;
     }
 
     .skills-developer {
         grid-template-columns: repeat(4, max-content);
         gap: 1.2rem;
+        justify-content: center;
+    }
+
+    .skills-libraries {
+        justify-items: center;
     }
 
 }
