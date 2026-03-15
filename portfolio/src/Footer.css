@@ -45,7 +45,7 @@
     color: white;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 725px) {
     .footer {
         height: auto;
         padding: 2rem 1rem;

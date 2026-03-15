@@ -22,6 +22,7 @@ function HomePage () {
     return (
         <>
         <div className='homepage'>
+     
         <NavBar refs={refs}></NavBar>
         <HomeSection></HomeSection>
         <SkillsSection skillsRef={skillsRef}></SkillsSection>
