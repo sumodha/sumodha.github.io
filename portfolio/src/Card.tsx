@@ -17,7 +17,7 @@ type CardProps = {
 function Card ({imgSrc, title, role, githubLink, externalLink, text, date, skills} : CardProps) {
     return (
         <div className = "card">
-            <img src={getImageURL(imgSrc)}/>
+            <img className = "card-image" src={getImageURL(imgSrc)}/>
             <div className="card-header">
 
             <h2 className = "card-title">{title}</h2>
