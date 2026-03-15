@@ -1,0 +1,14 @@
+
+#work-title, #leadership-title, #projects-title{
+    font-size: 5rem;
+    text-align: center;
+
+}
+
+.section-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 370px);
+    gap: 3rem;
+    justify-content: center;
+}
+

@@ -39,6 +39,10 @@
     grid-row: 3;
 }
 
+.home-icon:hover {
+    transform: scale(1.1);
+}
+
 .home-cover {
    
     width: 20rem;

@@ -1,5 +1,5 @@
 import './HomeSection.css'
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithubAlt } from 'react-icons/fa';
 import { BsSend } from 'react-icons/bs'; 
 import CoverImage from './assets/cover.jpg'
 
@@ -11,9 +11,9 @@ function HomeSection() {
         <h2 className= "home-subtitle"> Software Developer - CS @ Rice</h2>
         <div className="home-icons">
             
-            <a href="https://www.linkedin.com/in/sumodha/"><FaLinkedinIn color="black" size={45}></FaLinkedinIn></a>
-            <a href = "mailto:pokhrel.sumodha@gmail.com"><BsSend color="black" size = {45}></BsSend></a>
-            <a href="https://github.com/sumodha"><FaGithub color = "black" size={45}></FaGithub></a>
+            <a className="home-icon" href="https://www.linkedin.com/in/sumodha/"><FaLinkedinIn color="black" size={45}></FaLinkedinIn></a>
+            <a className="home-icon" href = "mailto:pokhrel.sumodha@gmail.com"><BsSend color="black" size = {45}></BsSend></a>
+            <a  className="home-icon" href="https://github.com/sumodha"><FaGithubAlt color = "black" size={45}></FaGithubAlt></a>
             
         </div>
         <img className="home-cover"src={CoverImage}/>

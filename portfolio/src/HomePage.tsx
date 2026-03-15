@@ -1,7 +1,7 @@
 import NavBar from './NavBar.tsx';
 import HomeSection from './HomeSection.tsx';
 import SkillsSection from './SkillsSection.tsx';
-import WorkSection from './WorkSection.tsx';
+import Section from './Section.tsx';
 import {useRef} from 'react';
 import './HomePage.css'
 import Footer from './Footer.tsx';
@@ -25,7 +25,7 @@ function HomePage () {
         <NavBar refs={refs}></NavBar>
         <HomeSection></HomeSection>
         <SkillsSection skillsRef={skillsRef}></SkillsSection>
-        <WorkSection workRef = {workRef}></WorkSection>
+        <Section workRef={workRef} projectsRef={projectsRef} leadershipRef={leadershipRef}></Section>
         </div>
         <Footer refs={refs}></Footer>
         </>
