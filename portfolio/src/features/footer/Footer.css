@@ -31,10 +31,14 @@
 }
 .footer-link a {
     color: white;
+    font-family: 'Helvetica';
+    font-size: bold;
 }
 .footer-link-main a {
     color: white;
     font-size: 2.5rem;
+    font-family: 'Helvetica';
+    font-size: bold;
   
 }
 .footer-link-main:hover {
