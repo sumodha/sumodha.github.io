@@ -1,7 +1,7 @@
 import './Card.css';
 import {FiGithub} from "react-icons/fi"
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { getImageURL } from './utils/image-utils';
+import { getImageURL } from '../utils/image-utils';
 
 type CardProps = {
     imgSrc: string, 

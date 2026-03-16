@@ -1,7 +1,7 @@
 import './Section.css';
-import Card from './Card.tsx';
+import Card from '../../components/Card.tsx';
 import { type RefObject } from 'react';
-import {cards} from './utils/cards.tsx'
+import {cards} from '../../utils/cards.tsx'
 
 
 type sectionProps = {

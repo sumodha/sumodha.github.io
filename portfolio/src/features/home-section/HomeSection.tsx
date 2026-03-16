@@ -1,7 +1,7 @@
 import './HomeSection.css'
 import { FaLinkedinIn, FaGithubAlt } from 'react-icons/fa';
 import { BsSend } from 'react-icons/bs'; 
-import CoverImage from './assets/cover.jpg'
+import CoverImage from '../../assets/cover.jpg'
 
 function HomeSection() {
 

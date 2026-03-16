@@ -1,5 +1,5 @@
 import './SkillsSection.css';
-import Skill from './Skill.tsx';
+import Skill from '../../components/Skill.tsx';
 import { type RefObject } from 'react';
 import {FaReact} from 'react-icons/fa';
 import { FaCss3Alt } from "react-icons/fa";

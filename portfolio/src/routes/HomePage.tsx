@@ -1,10 +1,10 @@
-import NavBar from './NavBar.tsx';
-import HomeSection from './HomeSection.tsx';
-import SkillsSection from './SkillsSection.tsx';
-import Section from './Section.tsx';
+import NavBar from '../features/navbar/NavBar.tsx';
+import HomeSection from '../features/home-section/HomeSection.tsx';
+import SkillsSection from '../features/skills-section/SkillsSection.tsx';
+import Section from '../features/sections/Section.tsx';
 import {useRef} from 'react';
 import './HomePage.css'
-import Footer from './Footer.tsx';
+import Footer from '../features/footer/Footer.tsx';
 
 function HomePage () {
     const skillsRef = useRef<HTMLHeadingElement | null>(null);
