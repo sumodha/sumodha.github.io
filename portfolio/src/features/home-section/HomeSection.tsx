@@ -18,7 +18,7 @@ function HomeSection() {
         </div>
         <img className="home-cover"src={CoverImage}/>
         <blockquote className = "home-quote">
-            "Hi, I'm Sumodha Pokhrel. I'm an undergraduate student at Rice University, majoring in Computer Science with a minor in Data Science. Everything I do is guided by my passion to learn -- and never stop learning."
+            "Hi, I'm Sumodha Pokhrel. I'm an undergraduate student at Rice University, majoring in Computer Science with a minor in Data Science. Everything I do is guided by my passion to learn -- and to never stop learning."
         </blockquote>
         
         </div>
