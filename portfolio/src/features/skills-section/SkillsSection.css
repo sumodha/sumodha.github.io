@@ -56,6 +56,10 @@
         justify-content: center;
     }
 
+    .skills-libraries .skill-title{
+    text-align: center;
+    }
+
     .skills-developer {
         grid-template-columns: repeat(4, max-content);
         gap: 1.2rem;
