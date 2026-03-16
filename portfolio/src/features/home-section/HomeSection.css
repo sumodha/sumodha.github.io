@@ -59,6 +59,7 @@
 
 .home-quote {
     font-family: 'Canela';
+    font-style: italic;
     font-size: clamp(1.25rem, 1.8vw, 1.5rem);
     text-align: left;
     width: clamp(18rem, 30vw, 30rem);
