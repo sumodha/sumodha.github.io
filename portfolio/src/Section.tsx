@@ -13,7 +13,7 @@ type sectionProps = {
 function Section ({workRef, leadershipRef, projectsRef} : sectionProps) {
     return (
         <div className="section">
-            <h1 id = 'work-title' ref={workRef}>WORK EXPERIENCE</h1>
+            <h1 className="header"id = 'work-title' ref={workRef}>WORK EXPERIENCE</h1>
             <div className="section-cards">
                 {cards.map((element, idx) => element.type=="work" ? 
                 <Card 
@@ -29,7 +29,7 @@ function Section ({workRef, leadershipRef, projectsRef} : sectionProps) {
                 </Card>:<></>)}
             </div>
             
-            <h1 id = 'leadership-title' ref={leadershipRef}>LEADERSHIP EXPERIENCE</h1>
+            <h1 className="header" id = 'leadership-title' ref={leadershipRef}>LEADERSHIP EXPERIENCE</h1>
             <div className="section-cards">
                 {cards.map((element, idx) => element.type=="leadership" ? 
                 <Card 
@@ -45,7 +45,7 @@ function Section ({workRef, leadershipRef, projectsRef} : sectionProps) {
                 </Card>:<></>)}
             </div>
 
-            <h1 id = 'projects-title' ref={projectsRef}>PASSION PROJECTS</h1>
+            <h1  className="header" id = 'projects-title' ref={projectsRef}>PASSION PROJECTS</h1>
             <div className="section-cards">
                 {cards.map((element, idx) => element.type=="projects" ? 
                 <Card 

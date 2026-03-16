@@ -43,7 +43,7 @@ type skillsRefProps = {
 function SkillsSection({skillsRef}: skillsRefProps) {
     return (
         <>
-        <h1 id = 'skills-title' ref={skillsRef}>SKILLS</h1>
+        <h1 className="header" id = 'skills-title' ref={skillsRef}>SKILLS</h1>
         <div className = "skills-section">
         <div className = "skills-column">
         <h2 className = 'skills-subtitle'>Frameworks</h2>

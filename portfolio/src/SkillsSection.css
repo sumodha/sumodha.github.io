@@ -4,10 +4,10 @@
     flex-wrap: wrap;
     gap: 5rem;
 }
-#skills-title{
-    font-size: 4.45rem;
-    text-align: center;
+#skills-title {
+    margin-block-end: 0rem;
 }
+
 .skills-subtitle{
     font-family: 'Canela';
     font-size: 3rem;
@@ -40,9 +40,6 @@
 }
 
 @media (max-width: 800px) {
-    #skills-title {
-        font-size: 3.4rem;
-    }
     .skills-subtitle{
         text-align: center;
     }

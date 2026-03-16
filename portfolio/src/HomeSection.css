@@ -10,7 +10,7 @@
 }
 
 .home-title {
-    font-size: clamp(4.5rem, 8vw, 8rem);
+    font-size: clamp(4.5rem, 8.25vw, 8rem);
     text-align: center;
     margin: 0rem;
     margin-block-start: 0rem;

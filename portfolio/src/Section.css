@@ -4,11 +4,6 @@
     justify-items: center;
 
 }
-#work-title, #leadership-title, #projects-title{
-    font-size: 5rem;
-    text-align: center;
-
-}
 
 .section-cards{
     display: grid;
@@ -18,10 +13,4 @@
 }
 
 
-@media (max-width: 800px) {
-    #work-title, #leadership-title, #projects-title{
-    font-size: 3.4rem;
-    text-align: center;
 
-}
-}

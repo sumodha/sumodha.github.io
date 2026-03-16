@@ -1,3 +1,17 @@
 .homepage {
     margin: 0rem 6rem;
 }
+
+.header { /* for all headings */
+    font-size: 5rem;
+    text-align: center;
+    margin-block-start: 1.7em;
+}
+
+@media (max-width: 800px) {
+    .header{
+    font-size: 3.4rem;
+    text-align: center;
+
+}
+}
