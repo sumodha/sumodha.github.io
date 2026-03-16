@@ -24,6 +24,7 @@
 .home-subtitle {
     font-family: 'Canela';
     font-size: clamp(2.5rem, 4vw, 3.3rem);
+    font-style: italic;
     text-align: center;
     margin: 0px;
     margin-block-start: 0rem;
