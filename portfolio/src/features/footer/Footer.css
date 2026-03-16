@@ -52,8 +52,9 @@
 
 @media (max-width: 725px) {
     .footer {
+        width: 100%;
         height: auto;
-        padding: 2rem 1rem;
+        padding: 2rem 0rem;
     }
 
     .footer-links {
