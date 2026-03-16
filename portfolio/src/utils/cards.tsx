@@ -77,7 +77,7 @@ const cards = [
         role: "MATH 212 PEER EDUCATOR", 
         githubLink: "", 
         externalLink: "https://oasus.rice.edu/", 
-        text: "tutored fellow peers on key concepts and ideas in multivariable calculus; attented training and professional development workshops",
+        text: "tutored fellow peers on key concepts and ideas in multivariable calculus; attented training and professional development workshops; planned and hosted an exam review session attented by 100+ students",
         date: "JAN 2025 - PRESENT",
         skills: []
 
