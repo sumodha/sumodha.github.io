@@ -12,7 +12,7 @@ type sectionProps = {
 
 function Section ({workRef, leadershipRef, projectsRef} : sectionProps) {
     return (
-        <>
+        <div className="section">
             <h1 id = 'work-title' ref={workRef}>WORK EXPERIENCE</h1>
             <div className="section-cards">
                 {cards.map((element, idx) => element.type=="work" ? 
@@ -61,7 +61,7 @@ function Section ({workRef, leadershipRef, projectsRef} : sectionProps) {
                 </Card>:<></>)}
             </div>
 
-        </>
+        </div>
     );
 }
 export default Section;
