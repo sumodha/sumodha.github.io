@@ -36,10 +36,10 @@ function NavBar({ refs }: { refs: refsProps }) {
             </button>
 
             <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-                <li className="navbar-link"><Link to="/" onClick={() => scrollTo('skills')}>SKILLS</Link></li>
                 <li className="navbar-link"><Link to="/" onClick={() => scrollTo('work')}>WORK</Link></li>
-                <li className="navbar-link"><Link to="/" onClick={() => scrollTo('leadership')}>LEADERSHIP</Link></li>
                 <li className="navbar-link"><Link to="/" onClick={() => scrollTo('projects')}>PROJECTS</Link></li>
+                <li className="navbar-link"><Link to="/" onClick={() => scrollTo('leadership')}>LEADERSHIP</Link></li>
+                <li className="navbar-link"><Link to="/" onClick={() => scrollTo('skills')}>SKILLS</Link></li>
             </ul>
         </div>
     );
