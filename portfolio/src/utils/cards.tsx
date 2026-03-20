@@ -53,23 +53,10 @@ const cards = [
         externalLink: "", 
         text: "coordinated a team of 20+ developers, ui/ux designers and researchers to write a 30+ page research proposal; hosted workshops and industry events to promote AR/VR", 
         date: "AUG 2025 - PRESENT",
-        skills: ["C#", "MRTK3", "Unity", "Figma", "Agile"]
+        skills: []
     
     },
-    {
-        type: "leadership",
-        imgSrc: "robotics.png", 
-        title:"Rice Robotics", 
-        role: "LEAD SOFTWARE DEVELOPER", 
-        githubLink: "https://github.com/rice-robotics-club/auto-nav-f2025", 
-        externalLink: "", 
-        text: "developed an low-cost autonomous mars rover with robotic arm control, Gazebo-based simulation, and ArUco tag, object and sample detection", 
-        date: "AUG 2024 - PRESENT",
-        skills: ["Python", "URDF", "ROS2", "Gazebo", "MoveIt2", "Nav2", "WebRTC", "GStreamer", "WebSockets", "Ollama", "Linux", "RViz", "Docker"]
-        
 
-
-    },
     {
         type: "leadership",
         imgSrc: "peereducator.webp", 
@@ -119,6 +106,34 @@ const cards = [
         text: "assisted and communicated with 25+ teachers and directors daily; served as a role model, assisted with transportation services and organized activities for 350+ middle school and high school students",
         date: "JUN - AUG 2022",
         skills: []
+
+
+    },
+    {
+        type: "projects",
+        imgSrc: "robotics2.png", 
+        title:"R-OWL-vers", 
+        role: "LEAD SOFTWARE DEVELOPER", 
+        githubLink: "https://github.com/rice-robotics-club/rover-base-station-dashboard", 
+        externalLink: "", 
+        text: "a rover for the university rover challenge (URC) with robotic arm control, ArUco tag, object and sample detection; built a low-latency base station-rover streaming platform for 4 cameras", 
+        date: "AUG 2025 - PRESENT",
+        skills: ["Python", "ROS2", "WebRTC", "GStreamer", "WebSockets", "Linux", "Docker"]
+        
+
+
+    },
+    {
+        type: "projects",
+        imgSrc: "robotics.png", 
+        title:"Rice Robotics", 
+        role: "SOFTWARE DEVELOPER", 
+        githubLink: "", 
+        externalLink: "", 
+        text: "a low-cost rover that autonomously explores lunar craters and lava tubes to locate and sample water deposits; worked on a Gazebo-based simulation", 
+        date: "AUG 2024 - Aug 2025",
+        skills: ["Python", "URDF", "ROS2", "Gazebo", "Ollama", "Linux", "RViz", "Docker"]
+        
 
 
     },
