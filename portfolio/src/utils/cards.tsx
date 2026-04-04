@@ -48,7 +48,7 @@ const cards = [
         type: "leadership",
         imgSrc: "ar.jpg", 
         title:"Rice AR/VR", 
-        role: "CO-PRESIDENT", 
+        role: "PROJECT MANAGER | CO-PRESIDENT", 
         githubLink: "", 
         externalLink: "", 
         text: "coordinated a team of 20+ developers, ui/ux designers and researchers to write a 30+ page research proposal; hosted workshops and industry events to promote AR/VR", 
