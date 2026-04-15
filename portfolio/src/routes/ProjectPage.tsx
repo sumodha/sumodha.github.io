@@ -6,6 +6,8 @@ import Footer from '../features/footer/Footer.tsx';
 import './ProjectPage.css'
 import NotFound from './NotFound.tsx'
 import { useEffect } from "react";
+import { MDXProvider } from '@mdx-js/react'
+import { mdxComponents } from '../components/mdxComponents.tsx'
 
 
 
@@ -50,7 +52,10 @@ function ProjectPage() {
       <hr className="divider"/>
 
       <div className="project-content">
-        <Content></Content>
+        <MDXProvider components={mdxComponents}>
+      <Content></Content>
+      </MDXProvider>
+        
       </div>
       </div>
     </div>

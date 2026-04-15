@@ -1,4 +1,4 @@
-import NASASuitsContent from '../projects/nasa-suits.mdx';
+import NASASuits2025Content from '../projects/nasa-suits-2025.mdx';
 
 export const cards = [
     {
@@ -24,7 +24,7 @@ export const cards = [
         text: "built an AR interface for NASA that tracks crew, and scientific assets and optimizes navigation, geologic sampling and EVA tasks to reduce cognitive load on astronaunts", 
         date: "AUG 2024 - AUG 2025",
         skills: ["C#", "MRTK3", "Unity", "Figma", "Agile"],
-        Content: NASASuitsContent
+        Content: NASASuits2025Content
     },
     {
         type: "work",

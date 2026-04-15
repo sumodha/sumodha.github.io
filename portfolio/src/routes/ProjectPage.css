@@ -93,7 +93,7 @@
   font-family: 'Canela';
   font-style: italic;
   font-size: 3.5rem;
-  margin: 1.2rem 0 1rem;
+  margin: 2rem 0 1rem;
 }
 
 /* ## heading */
@@ -148,4 +148,12 @@
   padding: 0.1rem 0.3rem;
   border-radius: 3px;
   font-size: 0.95rem;
+}
+
+.project-content img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
 }

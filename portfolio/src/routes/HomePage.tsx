@@ -25,6 +25,10 @@ function HomePage () {
     }
   }, [location]);
 
+  useEffect(() => {
+    document.title = "sumodha | portfolio";
+  }, []);
+
     return (
         <>
         <div className='homepage'>
