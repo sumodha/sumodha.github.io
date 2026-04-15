@@ -1,6 +1,5 @@
 import './SkillsSection.css';
 import Skill from '../../components/Skill.tsx';
-import { type RefObject } from 'react';
 import {FaReact} from 'react-icons/fa';
 import { SiExpress } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";

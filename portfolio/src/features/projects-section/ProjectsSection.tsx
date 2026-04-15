@@ -1,5 +1,4 @@
 import Card from '../../components/Card.tsx';
-import { type RefObject } from 'react';
 import {cards} from '../../utils/cards.tsx'
 
 

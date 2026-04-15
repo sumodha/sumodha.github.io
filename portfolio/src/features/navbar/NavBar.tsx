@@ -1,6 +1,6 @@
 import './NavBar.css';
 import { useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
