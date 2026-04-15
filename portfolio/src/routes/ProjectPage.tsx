@@ -5,6 +5,8 @@ import NavBar from '../features/navbar/NavBar.tsx';
 import Footer from '../features/footer/Footer.tsx';
 import './ProjectPage.css'
 import NotFound from './NotFound.tsx'
+import { useEffect } from "react";
+
 
 
 function ProjectPage() {
@@ -21,7 +23,13 @@ function ProjectPage() {
   if (!Content) {
   return (<NotFound></NotFound>
     );
-}
+
+
+  }
+
+  useEffect(() => {
+      document.title = "sumodha | portfolio";
+    }, []);
 
   return (
     <>
