@@ -1,4 +1,4 @@
-import AirAllianceContent from '../projects/air-alliance.mdx';
+import NASASuitsContent from '../projects/nasa-suits.mdx';
 
 export const cards = [
     {
@@ -11,8 +11,7 @@ export const cards = [
         externalLink: "", 
         text: "rebuilt an existing, inaccessible dashboard, visualizing real-time air quality data from 40+ Houston monitoring stations for 10,000+ residents", 
         date: "AUG 2025 - PRESENT",
-        skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"], 
-        Content: AirAllianceContent
+        skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"]
     },
     {
         type: "work",
@@ -24,7 +23,8 @@ export const cards = [
         externalLink: "https://www.nasa.gov/centers-and-facilities/johnson/nasa-challenge-wraps-student-teams-complete-space-suit-challenges/", 
         text: "built an AR interface for NASA that tracks crew, and scientific assets and optimizes navigation, geologic sampling and EVA tasks to reduce cognitive load on astronaunts", 
         date: "AUG 2024 - AUG 2025",
-        skills: ["C#", "MRTK3", "Unity", "Figma", "Agile"]
+        skills: ["C#", "MRTK3", "Unity", "Figma", "Agile"],
+        Content: NASASuitsContent
     },
     {
         type: "work",

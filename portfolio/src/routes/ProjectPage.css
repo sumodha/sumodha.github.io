@@ -134,10 +134,10 @@
 }
 
 /* inline elements */
-.project-content strong { font-weight: bold; }
-.project-content em { font-style: italic; }
+.project-content strong { font-family: 'Canela-Bold'; }
+.project-content em { font-family: 'Canela'; }
 .project-content a {
-  color: rgb(94, 94, 154);
+  color: #101069;
   text-decoration: underline;
 }
 

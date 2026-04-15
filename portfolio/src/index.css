@@ -35,6 +35,15 @@ a{
   font-display: swap; 
 }
 
+
+@font-face {
+  font-family: 'Canela-Bold';
+  src: url('./assets/fonts/canela/Canela-Bold-Trial.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; 
+}
+
 @font-face {
   font-family: 'Helvetica';
   src: url('./assets/fonts/helvetica/Helvetica-Bold.ttf') format('truetype');
