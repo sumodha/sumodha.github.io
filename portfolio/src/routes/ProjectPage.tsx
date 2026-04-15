@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getProjectBySlug } from '../utils/cards';
 import { getImageURL } from '../utils/image-utils';
 import NavBar from '../features/navbar/NavBar.tsx';
