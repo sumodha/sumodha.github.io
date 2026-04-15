@@ -15,7 +15,7 @@ export const cards = [
     },
     {
         type: "work",
-        slug: "",
+        slug: "nasa-suits-2025",
         imgSrc: "nasasuits.png", 
         title:"NASA SUITS", 
         role: "AUGMENTED REALITY SOFTWARE DEVELOPER", 
