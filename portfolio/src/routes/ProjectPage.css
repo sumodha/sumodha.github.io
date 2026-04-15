@@ -135,7 +135,7 @@
 
 /* inline elements */
 .project-content strong { font-family: 'Canela-Bold'; }
-.project-content em { font-family: 'Canela'; }
+.project-content em { font-family: 'Canela-Italic'; }
 .project-content a {
   color: #101069;
   text-decoration: underline;

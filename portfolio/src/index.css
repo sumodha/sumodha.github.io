@@ -28,6 +28,14 @@ a{
 }
 
 @font-face {
+  font-family: 'Canela-Italic';
+  src: url('./assets/fonts/canela/Canela-RegularItalic-Trial.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap; 
+}
+
+@font-face {
   font-family: 'Canela-Regular';
   src: url('./assets/fonts/canela/Canela-Regular-Trial.otf') format('opentype');
   font-weight: normal;
