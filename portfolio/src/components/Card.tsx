@@ -2,9 +2,11 @@ import './Card.css';
 import {FiGithub} from "react-icons/fi"
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { getImageURL } from '../utils/image-utils';
+import {Link} from 'react-router-dom'
 
 type CardProps = {
     imgSrc: string, 
+    slug?: string,
     title: string,
     role?: string, 
     githubLink?: string, 
@@ -14,10 +16,18 @@ type CardProps = {
     skills: Array<string>
 }
 
-function Card ({imgSrc, title, role, githubLink, externalLink, text, date, skills} : CardProps) {
+function Card ({imgSrc, slug, title, role, githubLink, externalLink, text, date, skills} : CardProps) {
+    
+    console.log(slug);
     return (
         <div className = "card">
-            <img className = "card-image" src={getImageURL(imgSrc)}/>
+            {slug ? (
+            <Link to={`/portfolio/${slug}`}>
+             <img className="card-image slug" src={getImageURL(imgSrc)} alt={title} />
+             </Link>
+             ) : (
+            <img className="card-image" src={getImageURL(imgSrc)} alt={title} />
+             )}
             <div className="card-header">
 
             <h2 className = "card-title">{title}</h2>

@@ -1,38 +1,29 @@
-import './Footer.css'
-import {Link} from 'react-router-dom';
+import './Footer.css';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
+function Footer() {
+  const navigate = useNavigate();
 
-type refsProps= {
-    skills: React.RefObject<HTMLElement | null>,
-    work: React.RefObject<HTMLElement | null>,
-    leadership: React.RefObject<HTMLElement | null>,
-    projects: React.RefObject<HTMLElement | null>
+  function goToSection(id: string) {
+    navigate(`/#${id}`);
+  }
 
-}
-
-function Footer({refs} : {refs: refsProps}) {
-
-    // scrolls to a specific section within the home page; sections defined by keys of refs dict
-    function scrollTo(ref: keyof refsProps){
-        refs[ref].current?.scrollIntoView({behavior: 'smooth', block:'start'})
-        
-    }
-    return (
-        <div className='footer'>
-            <ul className = "footer-links">
-                
-                <li className="footer-link"><Link to="/" onClick={()=>scrollTo('work')}>WORK</Link></li>
-                <li className="footer-link"><Link to = "/" onClick={()=>scrollTo('projects')}>PROJECTS</Link></li>
-                <li className='footer-link-main'> <Link  to="/" onClick={() => window.scrollTo({top:0, behavior:"smooth"})}>SUMODHA</Link></li>
-                <li className="footer-link"><Link to="/" onClick={()=>scrollTo('skills')}>SKILLS</Link></li>
-                <li className="footer-link"><Link to ="/" onClick={()=>scrollTo('leadership')}>LEADERSHIP</Link></li>
-                
-            </ul>
-            <p className="footer-text">Made with love. © Sumodha Pokhrel</p>
-        
-        </div>
-        
-    );
+  return (
+    <div className="footer">
+      <ul className="footer-links">
+        <li className="footer-link"><a onClick={() => goToSection('work')}>WORK</a></li>
+        <li className="footer-link"><a onClick={() => goToSection('projects')}>PROJECTS</a></li>
+        <li className="footer-link-main">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            SUMODHA
+          </Link>
+        </li>
+        <li className="footer-link"><a onClick={() => goToSection('skills')}>SKILLS</a></li>
+        <li className="footer-link"><a onClick={() => goToSection('leadership')}>LEADERSHIP</a></li>
+      </ul>
+      <p className="footer-text">Made with love. © Sumodha Pokhrel</p>
+    </div>
+  );
 }
 
 export default Footer;

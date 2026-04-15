@@ -1,23 +1,21 @@
 import Card from '../../components/Card.tsx';
-import { type RefObject } from 'react';
 import {cards} from '../../utils/cards.tsx'
 
 
-type leadershipSectionProps = {
-    leadershipRef: RefObject<HTMLHeadingElement | null>,
-}
 
-function LeadershipSection ({leadershipRef} : leadershipSectionProps) {
+
+function LeadershipSection () {
     return (
         <>
 
             
-            <h1 className="header" id = 'leadership-title' ref={leadershipRef}>LEADERSHIP EXPERIENCE</h1>
+            <h1 className="header" id = 'leadership' >LEADERSHIP EXPERIENCE</h1>
             <div className="section-cards">
                 {cards.map((element, idx) => element.type=="leadership" ? 
                 <Card 
                 key ={idx}
                 imgSrc={element.imgSrc} 
+                slug = {element.slug}
                 title={element.title} 
                 role = {element.role} 
                 githubLink= {element.githubLink}

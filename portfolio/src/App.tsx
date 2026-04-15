@@ -1,12 +1,23 @@
-import HomePage from './routes/HomePage.tsx';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './routes/HomePage';
+import ProjectPage from './routes/ProjectPage';
+import ScrollToTop from './components/ScrollToTop';
+import NotFound from './routes/NotFound'
+
 
 function App() {
 
   return (
     <>
-      <HomePage></HomePage>
+    <ScrollToTop></ScrollToTop>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/portfolio/:slug" element={<ProjectPage />} />
+      {/* Catch-all route */}
+        <Route path="*" element={<NotFound />} />
+    </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

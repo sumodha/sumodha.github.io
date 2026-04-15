@@ -25,25 +25,10 @@ import ROS2Icon from '../../assets/icons/ros2_icon.svg?react';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-type skillsRefProps = {
-    skillsRef: RefObject<HTMLHeadingElement | null>
-}
-
-function SkillsSection({skillsRef}: skillsRefProps) {
+function SkillsSection() {
     return (
         <>
-        <h1 className="header" id = 'skills-title' ref={skillsRef}>SKILLS</h1>
+        <h1 className="header" id = 'skills' >SKILLS</h1>
         <div className = "skills-section">
         <div className = "skills-column">
         <h2 className = 'skills-subtitle'>Frameworks</h2>

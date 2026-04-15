@@ -3,19 +3,17 @@ import { type RefObject } from 'react';
 import {cards} from '../../utils/cards.tsx'
 
 
-type projectsSectionProps = {
-    projectsRef: RefObject<HTMLHeadingElement | null>
-}
 
-function ProjectsSection ({projectsRef} : projectsSectionProps) {
+function ProjectsSection () {
     return (
         <>
            
-            <h1  className="header" id = 'projects-title' ref={projectsRef}>PASSION PROJECTS</h1>
+            <h1  className="header" id = 'projects' >PASSION PROJECTS</h1>
             <div className="section-cards">
                 {cards.map((element, idx) => element.type=="projects" ? 
                 <Card 
                 key ={idx}
+                slug = {element.slug}
                 imgSrc={element.imgSrc} 
                 title={element.title} 
                 role = {element.role} 

@@ -1,6 +1,9 @@
-const cards = [
+import AirAllianceContent from '../projects/air-alliance.mdx';
+
+export const cards = [
     {
         type: "work",
+        slug: "",
         imgSrc: "airalliance.png", 
         title:"Air Alliance Houston", 
         role: "FULL-STACK WEB DEVELOPER", 
@@ -8,10 +11,12 @@ const cards = [
         externalLink: "", 
         text: "rebuilt an existing, inaccessible dashboard, visualizing real-time air quality data from 40+ Houston monitoring stations for 10,000+ residents", 
         date: "AUG 2025 - PRESENT",
-        skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"]
+        skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"], 
+        Content: AirAllianceContent
     },
     {
         type: "work",
+        slug: "",
         imgSrc: "nasasuits.png", 
         title:"NASA SUITS", 
         role: "AUGMENTED REALITY SOFTWARE DEVELOPER", 
@@ -23,6 +28,7 @@ const cards = [
     },
     {
         type: "work",
+        slug: "",
         imgSrc: "sprout.png", 
         title:"Sprout", 
         role: "SOFTWARE DEVELOPER", 
@@ -34,6 +40,7 @@ const cards = [
     },
     {
         type: "work",
+        slug: "",
         imgSrc: "dudoklab.png", 
         title:"Baylor College of Medicine", 
         role: "COMPUTATIONAL RESEARCH ASSISTANT", 
@@ -46,6 +53,7 @@ const cards = [
     },
     {
         type: "leadership",
+        slug: "",
         imgSrc: "ar.jpg", 
         title:"Rice AR/VR", 
         role: "PROJECT MANAGER | CO-PRESIDENT", 
@@ -59,6 +67,7 @@ const cards = [
 
     {
         type: "leadership",
+        slug: "",
         imgSrc: "peereducator.webp", 
         title:"Rice University OASUS", 
         role: "MATH 212 PEER EDUCATOR", 
@@ -72,6 +81,7 @@ const cards = [
     },
     {
         type: "leadership",
+        slug: "",
         imgSrc: "ta.jpeg", 
         title:"Rice University CS", 
         role: "COMP 140 TA", 
@@ -85,6 +95,7 @@ const cards = [
     },
     {
         type: "leadership",
+        slug: "",
         imgSrc: "teacher.jpg", 
         title:"Breakthrough", 
         role: "TEACHING FELLOW", 
@@ -98,6 +109,7 @@ const cards = [
     },
     {
         type: "leadership",
+        slug: "",
         imgSrc: "assistant.jpg", 
         title:"Breakthrough ", 
         role: "TEACHING ASSISTANT", 
@@ -111,6 +123,7 @@ const cards = [
     },
     {
         type: "projects",
+        slug: "",
         imgSrc: "robotics2.png", 
         title:"R-OWL-vers", 
         role: "LEAD SOFTWARE DEVELOPER", 
@@ -125,6 +138,7 @@ const cards = [
     },
     {
         type: "projects",
+        slug: "",
         imgSrc: "robotics.png", 
         title:"Rice Robotics", 
         role: "SOFTWARE DEVELOPER", 
@@ -139,6 +153,7 @@ const cards = [
     },
     {
         type: "projects",
+        slug: "",
         imgSrc: "thyroiddx.png", 
         title:"thyroidDx", 
         role: "", 
@@ -150,6 +165,7 @@ const cards = [
     },
     {
         type: "projects",
+        slug: "",
         imgSrc: "digits.png", 
         title:"digits", 
         role: "", 
@@ -162,6 +178,7 @@ const cards = [
     },
     {
         type: "projects",
+        slug: "",
         imgSrc: "carenet.png", 
         title:"carenet", 
         role: "", 
@@ -175,6 +192,7 @@ const cards = [
 
     {
         type: "projects",
+        slug: "",
         imgSrc: "aero.jpeg", 
         title:"bowbot", 
         role: "PROGRAMMER", 
@@ -187,4 +205,5 @@ const cards = [
     }
 ]
 
-export {cards};
+export const getProjectBySlug = (slug: string) =>
+  cards.find(c => c.slug === slug);
