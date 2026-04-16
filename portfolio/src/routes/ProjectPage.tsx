@@ -45,9 +45,9 @@ function ProjectPage() {
       <h1 className="project-title">{title}</h1>
       <h3 className="project-role">{role}</h3>
       <p className="project-text">{text}</p>
-        <ul className="project-skills">
+       {skills.length > 0?<ul className="project-skills">
                 {skills.map((element, idx) => <li className="card-skill" key={idx}>{element}</li>)}
-      </ul>
+      </ul>: <></>} 
       {date? <h3 className="project-date">{date}</h3>: <></>}
       <hr className="divider"/>
 

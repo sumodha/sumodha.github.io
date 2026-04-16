@@ -1,9 +1,23 @@
 import NASASuits2025Content from '../projects/nasa-suits-2025.mdx';
+import NASASuits2026Content from '../projects/nasa-suits-2026.mdx';
+import Breakthrough2023Content from '../projects/breakthrough-2023.mdx';
+import DigitsContent from '../projects/digits.mdx';
+import AirAllianceHoustonContent from '../projects/aah.mdx';
+import SproutContent from '../projects/sprout.mdx';
+import BCMContent from '../projects/bcm.mdx';
+import ROWLVersContent from '../projects/r-owl-vers.mdx';
+import RiceRoboticsContent from '../projects/rice-robotics.mdx';
+import ThyroidDxContent from '../projects/thyroiddx.mdx';
+import CareNetContent from '../projects/carenet.mdx';
+import BowBotContent from '../projects/bowbot.mdx';
+import RiceArVrContent from '../projects/rice-ar-vr.mdx';
+import RiceUniversityOASUSContent from '../projects/rice-oasus.mdx';
+import RiceUniversityCSContent from '../projects/rice-cs.mdx';
 
 export const cards = [
     {
         type: "work",
-        slug: "",
+        slug: "aah",
         imgSrc: "airalliance.png", 
         title:"Air Alliance Houston", 
         role: "FULL-STACK WEB DEVELOPER", 
@@ -11,7 +25,34 @@ export const cards = [
         externalLink: "", 
         text: "rebuilt an existing, inaccessible dashboard, visualizing real-time air quality data from 40+ Houston monitoring stations for 10,000+ residents", 
         date: "AUG 2025 - PRESENT",
-        skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"]
+        skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"], 
+        Content: AirAllianceHoustonContent
+    },
+    {
+        type: "work",
+        slug: "nasa-suits-2026",
+        imgSrc: "nasasuits-2026.png", 
+        title:"NASA SUITS", 
+        role: "LEAD SOFTWARE DEVELOPER", 
+        githubLink: "https://github.com/Rice-ARVR/OWL-SUITS-2026-PR", 
+        externalLink: "", 
+        text: "built a mission-critical rover control interface for NASA that integrates live data from NASA’s TSS and autonomously navigates to lost LTV", 
+        date: "AUG 2025 - PRESENT",
+        skills: ["React", "TypeScript", "Python", "FastAPI", "MongoDB", "WebSockets"],
+        Content: NASASuits2026Content
+    },
+    {
+        type: "work",
+        slug: "sprout",
+        imgSrc: "sprout.png", 
+        title:"Sprout", 
+        role: "SOFTWARE DEVELOPER", 
+        githubLink: "", 
+        externalLink: "https://thesproutapp.com", 
+        text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
+        date: "AUG 2025 - PRESENT",
+        skills: ["Python", "Javascript", "React Native","PostgreSQL", "Flask", "Docker"], 
+        Content: SproutContent
     },
     {
         type: "work",
@@ -28,19 +69,7 @@ export const cards = [
     },
     {
         type: "work",
-        slug: "",
-        imgSrc: "sprout.png", 
-        title:"Sprout", 
-        role: "SOFTWARE DEVELOPER", 
-        githubLink: "", 
-        externalLink: "https://thesproutapp.com", 
-        text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
-        date: "AUG 2025 - PRESENT",
-        skills: ["Python", "Javascript", "React Native","PostgreSQL", "Flask", "Docker"]
-    },
-    {
-        type: "work",
-        slug: "",
+        slug: "bcm",
         imgSrc: "dudoklab.png", 
         title:"Baylor College of Medicine", 
         role: "COMPUTATIONAL RESEARCH ASSISTANT", 
@@ -48,12 +77,13 @@ export const cards = [
         externalLink: "", 
         text: "enhanced a large biomedical signal processing codebase by developing an interactive PyQt5 GUI to synchronize EEG and video recordings via TTL pulses, reducing manual seizure review time", 
         date: "MAY - AUG 2025",
-        skills: ["Python","OpenCV", "Matplotlib","NumPy"]
+        skills: ["Python","OpenCV", "Matplotlib","NumPy"], 
+        Content: BCMContent
 
     },
     {
         type: "leadership",
-        slug: "",
+        slug: "rice-ar-vr",
         imgSrc: "ar.jpg", 
         title:"Rice AR/VR", 
         role: "PROJECT MANAGER | CO-PRESIDENT", 
@@ -61,13 +91,14 @@ export const cards = [
         externalLink: "", 
         text: "coordinated a team of 20+ developers, ui/ux designers and researchers to write a 30+ page research proposal; hosted workshops and industry events to promote AR/VR", 
         date: "AUG 2025 - PRESENT",
-        skills: []
+        skills: [], 
+        Content: RiceArVrContent
     
     },
 
     {
         type: "leadership",
-        slug: "",
+        slug: "rice-oasus",
         imgSrc: "peereducator.webp", 
         title:"Rice University OASUS", 
         role: "MATH 212 PEER EDUCATOR", 
@@ -75,13 +106,14 @@ export const cards = [
         externalLink: "https://oasus.rice.edu/", 
         text: "tutored fellow peers on key concepts and ideas in multivariable calculus; attented training and professional development workshops; planned and hosted an exam review session attented by 100+ students",
         date: "JAN 2025 - PRESENT",
-        skills: []
+        skills: [], 
+        Content: RiceUniversityOASUSContent
 
 
     },
     {
         type: "leadership",
-        slug: "",
+        slug: "rice-cs",
         imgSrc: "ta.jpeg", 
         title:"Rice University CS", 
         role: "COMP 140 TA", 
@@ -89,13 +121,14 @@ export const cards = [
         externalLink: "", 
         text: "supported a 400+ class by hosting office hours, clarifying key concepts, guiding students through homework problems and assisting with course activities",
         date: "AUG - DEC 2025",
-        skills: []
+        skills: [], 
+        Content: RiceUniversityCSContent
 
 
     },
     {
         type: "leadership",
-        slug: "",
+        slug: "breakthrough-2023",
         imgSrc: "teacher.jpg", 
         title:"Breakthrough", 
         role: "TEACHING FELLOW", 
@@ -103,7 +136,8 @@ export const cards = [
         externalLink: "https://breakthroughcollaborative.org/", 
         text: "taught two pre-algebra classes with 10+ students at the nation’s largest pre-professional teacher program for underserved communities",
         date: "JUN - AUG 2023",
-        skills: []
+        skills: [],
+        Content: Breakthrough2023Content
 
 
     },
@@ -123,7 +157,7 @@ export const cards = [
     },
     {
         type: "projects",
-        slug: "",
+        slug: "r-owl-vers",
         imgSrc: "robotics2.png", 
         title:"R-OWL-vers", 
         role: "LEAD SOFTWARE DEVELOPER", 
@@ -131,14 +165,15 @@ export const cards = [
         externalLink: "", 
         text: "a rover for the university rover challenge (URC) with robotic arm control, ArUco tag, object and sample detection; built a low-latency base station-rover streaming platform for 4 cameras", 
         date: "AUG 2025 - PRESENT",
-        skills: ["Python", "ROS2", "WebRTC", "GStreamer", "WebSockets", "Linux", "Docker"]
+        skills: ["Python", "ROS2", "WebRTC", "GStreamer", "WebSockets", "Linux", "Docker"], 
+        Content: ROWLVersContent
         
 
 
     },
     {
         type: "projects",
-        slug: "",
+        slug: "rice-robotics",
         imgSrc: "robotics.png", 
         title:"Rice Robotics", 
         role: "SOFTWARE DEVELOPER", 
@@ -146,14 +181,15 @@ export const cards = [
         externalLink: "", 
         text: "a low-cost rover that autonomously explores lunar craters and lava tubes to locate and sample water deposits; worked on a Gazebo-based simulation", 
         date: "AUG 2024 - Aug 2025",
-        skills: ["Python", "URDF", "ROS2", "Gazebo", "Ollama", "Linux", "RViz", "Docker"]
+        skills: ["Python", "URDF", "ROS2", "Gazebo", "Ollama", "Linux", "RViz", "Docker"],
+        Content: RiceRoboticsContent
         
 
 
     },
     {
         type: "projects",
-        slug: "",
+        slug: "thyroiddx",
         imgSrc: "thyroiddx.png", 
         title:"thyroidDx", 
         role: "", 
@@ -161,11 +197,12 @@ export const cards = [
         externalLink: "https://thyroiddx.onrender.com", 
         text: "a full-stack app that gives patient thyroid disease predictions based on routine blood-work tests with 97% model (neural network) accuracy", 
         date: "",
-        skills: ["Python", "React", "Flask", "TailwindCSS", "Pandas", "NumPy", "Scikit-Learn", "Matplotlib"]
+        skills: ["Python", "React", "Flask", "TailwindCSS", "Pandas", "NumPy", "Scikit-Learn", "Matplotlib"], 
+        Content: ThyroidDxContent
     },
     {
         type: "projects",
-        slug: "",
+        slug: "digits",
         imgSrc: "digits.png", 
         title:"digits", 
         role: "", 
@@ -173,12 +210,13 @@ export const cards = [
         externalLink: "https://nytdigits.onrender.com/", 
         text: "a full-stack application that recreates the New York Times Digits game after its discontinuation", 
         date: "",
-        skills: ["JavaScript", "React", "TailwindCSS","Express.js", "Node.js", "MongoDB"]
+        skills: ["JavaScript", "React", "TailwindCSS","Express.js", "Node.js", "MongoDB"], 
+        Content: DigitsContent
         
     },
     {
         type: "projects",
-        slug: "",
+        slug: "carenet",
         imgSrc: "carenet.png", 
         title:"carenet", 
         role: "", 
@@ -186,13 +224,14 @@ export const cards = [
         externalLink: "https://devpost.com/software/carenet-eoip85", 
         text: "a full-stack app with a user-centric conversational AI to guide users in finding and connecting with 550+ federal/state social welfare programs", 
         date: "",
-        skills: ["JavaScript", "Python", "React", "TailwindCSS", "Flask"]
+        skills: ["JavaScript", "Python", "React", "TailwindCSS", "Flask"], 
+        Content: CareNetContent
 
     },
 
     {
         type: "projects",
-        slug: "",
+        slug: "bowbot",
         imgSrc: "aero.jpeg", 
         title:"bowbot", 
         role: "PROGRAMMER", 
@@ -200,7 +239,8 @@ export const cards = [
         externalLink: "https://www.youtube.com/@aerorobotics9850", 
         text: "an autonomous robot for the First Tech Challenge (FTC) Centerstage season by team 10143 Aero Robotics", 
         date: "",
-        skills: ["Java", "OpenCV", "TensorFlow"]
+        skills: ["Java", "OpenCV", "TensorFlow"], 
+        Content: BowBotContent
     
     }
 ]
