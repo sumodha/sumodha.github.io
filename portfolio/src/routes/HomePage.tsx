@@ -8,6 +8,7 @@ import LeadershipSection from '../features/leadership-section/LeadershipSection.
 import ProjectsSection from '../features/projects-section/ProjectsSection.tsx';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import OtherSection from '../features/other-section/OtherSection.tsx';
 
 
 function HomePage () {
@@ -39,6 +40,7 @@ function HomePage () {
         <ProjectsSection ></ProjectsSection>
         <SkillsSection ></SkillsSection>
         <LeadershipSection ></LeadershipSection>
+        <OtherSection></OtherSection>
         </div>
         <Footer ></Footer>
         </>

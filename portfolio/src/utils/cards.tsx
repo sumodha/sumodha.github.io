@@ -13,6 +13,8 @@ import BowBotContent from '../projects/bowbot.mdx';
 import RiceArVrContent from '../projects/rice-ar-vr.mdx';
 import RiceUniversityOASUSContent from '../projects/rice-oasus.mdx';
 import RiceUniversityCSContent from '../projects/rice-cs.mdx';
+import Phil318Content from '../projects/phil-318.mdx';
+
 
 export const cards = [
     {
@@ -242,7 +244,20 @@ export const cards = [
         skills: ["Java", "OpenCV", "TensorFlow"], 
         Content: BowBotContent
     
+    },
+    {
+        type: "other",
+        slug: "phil-318",
+        imgSrc: "phil.webp", 
+        title:"Philosphy of Language", 
+        role: "", 
+        githubLink: "", 
+        externalLink: "", 
+        text: "papers for Philosophy of Language (PHIL 318) class at Rice University, taught by Brian Miller",
+        skills: [], 
+        Content: Phil318Content
     }
+
 ]
 
 export const getProjectBySlug = (slug: string) =>

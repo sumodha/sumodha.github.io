@@ -1,0 +1,231 @@
+# Introduction
+The following are the three papers I wrote for my Philosophy of Language (PHIL 318) class at Rice University, taught by [Brian Miller](https://profiles.rice.edu/faculty/brian-miller). Each paper is less than 1,500 words and presents new theories on how we should understand language as a philosophical concept. The limited number of words is a product of Professor Miller's ideology on what a philosophy class should be; it should push you to think beyond the writing of other philosophers and create something new, something worth while. 
+
+Writing these papers made me appreciate and love philosophy more than I already had. At its core, philosophy is logic and logic is everything. To me, **philosophy is everything**; it is in everything that we do and think and shapes how we interact with others. It is what makes us humans. My love for philosophy aside, I hope you enjoy reading my papers as much I did writing them! 
+
+<br></br><br></br><br></br><br></br><br></br>
+
+## <Center> PAPER 1 </Center>
+# <Center> Null: Referring to Objects that Do Not Exist </Center>
+## THE PROBLEM
+### Frege
+Frege argues that there are two parts to an expression: its sense, which is the mode of presentation (i.e the context to how we are referring to the object) and its referrent, which is the object, itself, that we are referring to. The referent determines the truth value of a declarative sentence, so, it follows that objects that do not exist (i.e have no referent) do not have a truth value. However, this is unintuitive. Suppose we have a child who learns the truth about Santa Claus from their parents and utters the sentence, Santa Claus does not exist. How can it be that the sentence has no truth value? It is intuitive to say that the sentence is true; Santa Claus, in fact, does not exist. Furthermore, Frege’s justification for why a sentence involving Santa Claus does not have a truth value is based on the fact that Santa Claus does not exist. In other words, we have the following: 
+<Center> *Proposition*: Santa Claus does not exist. </Center>
+<Center> *Conclusion*: Therefore, we cannot refer to Santa Claus. </Center>
+He relies on the fact that the sentence is false, so how can it be that the sentence, then, has no truth value at all? We have reached a contradiction. 
+
+### Russell
+In Russell’s theory of meaning, names are just definitive descriptions. When we build a sentence that has describes a subject, s, with the predicate, p, we are saying that 
+<Center> ∃x (E(x) ⋀ ∀y(x ≠ y → E(y)) ⋀ P(x)), where E(x) is “x is s”, P(x) is “x is p”. </Center> 
+<Center> Now, suppose we have two sentences: </Center>
+<Center> (1) Harry Potter’s mom is Lily Potter. </Center>
+<Center> (2) Harry Potter’s mom is not Lily Potter. </Center>
+(For the sake of argument, it is true that in the Harry Potter Series, Harry Potter’s mom is Lily Potter.)
+Since Harry Potter is a fictional character, he does not exist. Therefore, sentence (1) evaluates to false. For the same reason, sentence (2) also evaluates to false. If sentence (2) is false, then sentence (1) has to be true. But sentence (1) is also false, so we have reached a contradiction. 
+
+We quickly see that in Russell' s theory that sentences that involve subjects that do not exist automatically evaluate as false, which means that we cannot properly evaluate the existence of some property with a subject that does not exist. 
+
+### Kripke
+Kripke’s argument does not inherently have any logical flaws when it comes to referring to objects that do not exist. However, this is only because he completely disregards them to begin with. He argues that names have an initial baptism, where they are dubbed by name or by description, and then a causal chain of communication, where people continue to use that name to refer to the object, in turn, creating links of chains between people. Because names that refer to objects that do not exist cannot have an initial baptism, his theory does not apply to those cases. While doing this does not cause any holes in his argument, it makes his theory incomplete. In language, we refer to objects that do not exist all the time, whether it be characters from folktales, fictional stories, legends, myths, etc. How can we have a proper theory of reference if we do not consider these situations?
+
+### Takeaways
+Based on the flaws of Frege, Russell, and Kripke’s theories, it follows that a successful theory that includes objects that do not exist needs to (1) not force us to accept that these objects exist, (2) must have some way of referring to these types of objects, and (3) has to have some way of properly evaluating a property associated with said object. Because Kripke’s theory does not have any contradictions concerning objects that do not exist, we will build our own theory based on an expansion of his theory to include said objects. 
+
+## The Solution |  The Theory
+<Center> Objects can exist within two scopes: </Center>
+<Center> (1) R(x): Exist in the real world, r </Center>
+<Center> (2) F(x): Exist in the fictional world, f </Center>
+Objects are either in (1) or (2) or both ((1) and (2)). In other words, we can have objects that only exist in the real world, only exist in the fictional world or that exist in both the real world and in the fictional world. 
+
+### Meaning
+The meaning of a name is exhausted by the reference (the object that is being referred to) and its scope and has nothing to do with its properties (a name is not disguised as a definitive description). A name has an initial dubbing ceremony, where it gets the name, and a casual chain of communication, where people continue to use that name to refer to the said object with the specified scope. For objects in (1), Kripke has already defined what this process looks like; A baby is named John (initial dubbing ceremony) and the baby’s parents tell their parents that the baby’s name is John (starting a casual chain). Now, for objects in (2), someone creates an object, assigns a name to it (initial dubbing ceremony) and people learn to use that name for the specified object (casual chain). (Notice that the only difference between (1) and (2) is that for objects in (2), there is an initial creation step.) For example, J.K Rowling (an author) created the main character of her books and assigned the name, Harry Potter, to it. Once she published the book, people began to refer to the main character as Harry Potter. 
+
+### Existence 
+When we discuss only the existence of objects, we inherently imply that our scope is (1). So, Santa Claus exists is false because Santa Claus does not exist in the real world, which matches our intuition.  If we want to use scope (2), we must specify it in our sentence, which mirrors real human language. So, Santa Claus exists in the fictional world is true.
+
+To formularize this, when we have a subject, s and a prepositional phrase, h, we are saying that
+<Center>∃x (x = s ⋀ (R(x) V (h = f → F(x))).</Center>
+
+### Properties
+On the other hand, when we talk about the properties of objects, we inherently imply the correct scope for both the existence of the object and its properties. So, Harry Potter’s mom is Lily Potter is true because Harry Potter exists in the fictional world he was created in and Harry Potter’s mom is Lily Potter in the same world. For sake of completeness, Harry Potter’s mom is Molly Weasley is false because even though Harry Potter exists in the fictional world he was created in, his mom is Lily Potter, not Molly Weasley in that world. In a similar way, Trees are green is true because trees exist in the real world and trees are green in the real world. 
+
+To formularize this, when we have a subject, s, and a predicate, p, we are saying that
+<Center> ∃x ( x = s ⋀ ((R(x) ⊕ F(x)) → ((R(x) → P(x, r)) V (F(x) → P(x, f))))), </Center>
+<Center> where P(x, w) is “x is p in w” and w is a world type (i.e either w or f). </Center>
+
+When we have objects that exist both in the real world and the fictional world, we imply that our scope is (1), unless specified otherwise. For example, suppose we have a book, b, such that all people in that book are able to fly. People are able to fly is false because people exist in the real world and they cannot fly. People are able to fly in b is true, however, because people exist in b and they can fly. 
+
+To formularize this, when we have a subject, s, a predicate, p, and a preposition phrase, h, we are saying that
+<Center> ∃x (x = s ⋀ ((R(x) ⋀ F(x) ⋀ h = f ) → P(x,f) V (R(x) ⋀ F(x) ⋀ h ≠ f ) → P(x, r))), </Center> 
+<Center> where P(x, w) is “x is p in w” and w is a world type (i.e either w or f). </Center>
+
+### Final Thought
+In essence, we expand Kripke’s theory of reference to account for objects that do not exist by using scopes.
+
+<br></br><br></br><br></br><br></br><br></br>
+
+## <Center> PAPER 2 </Center>
+# <Center> Beyond Intention: Reconstructing Grice’s Theory of Meaning </Center> 
+## GRICE'S THEORY
+H.P Grice distinguishes natural meaning, which is what something actually entails (i.e a direct cause and effect relationship), from non-natural meaning, which is what someone intends to communicate, in order to build a theory of meaning that focuses on how speakers use language to communicate. He explains linguistic meaning in terms of speaker meaning, emphasizing the intention that underlies communicative acts. He claims that what a speaker means by an utterance depends on the complex structure of their intentions and the hearer’s recognition of those intentions. In other words, meaning arises when a speaker’s communicative intention is recognized and acted upon by a hearer, building a sort of psychological connection between speaker and hearer.
+
+To formalize this, a speaker S means something by uttering U if and only if:
+1. S intends that an audience A believes some proposition p.
+2. S intends that A recognizes that S intends (1).
+3. S intends A’s recognition of (1) is one of the main reasons A comes to believe p.
+
+Notice that his theory poses 3 key constraints on meaning: (1) there exists an audience A, (2) there is a direct relationship between intention and belief (i.e there is an intention from the speaker S that the audience A should believe some proposition p), and (3) only intention and the utterance U build meaning. Although, it may be natural to assume that these constraints are necessary, we will quickly find that this framework is inflexible with how natural language is used in the real world.
+
+## THE PROBLEM
+### Problem (1)
+<Center> Case A: </Center>
+I (S) smile at my phone after receiving a positive text message from my best friend. 
+
+No audience A is present or intended.
+
+I (S) do not smile with the intention of communicating.
+
+Is there meaning in my smile? Intuitively, the answer is yes. The smile portrays my happiness. If there were someone in the room with me and they saw my smile, they would be able to determine that I was happy and would be right in asking, “What are you smiling at?”. However, Grice’s theory would beg to differ. I do not smile with the intention of showing it or displaying it to some audience; there is no audience, so there must not be any meaning. But how can that be? Even though I did not intentionally smile (or rather did not smile with the intention of displaying it to some audience), there is still meaning in my expression.
+
+<Center> Case B: </Center>
+I (S) write utterances U in my private diary.
+
+I (S) do not intend any other person to read U.
+
+If audience A exists, A = S.
+
+I (S) do not intend to create new beliefs in myself.
+
+Suppose that I am not writing with the intention of someone finding my diary; I am writing for myself. There is meaning to what I am doing and the words that I am writing. But where does this meaning come from? Who is the audience? In Grice’s favor, we can argue that the audience is myself, since that is the person I am writing for. But, there is no belief present. I am not writing with the intention to make myself believe something. Instead, I am writing as a way to express my thoughts and emotions. There is meaning in what I am doing but it cannot be merely explained by his framework; there needs to be something more. 
+
+### Problem (2)
+<Center> Case A: </Center>
+Let p = "I love you”. Let q = "You won't believe p".
+
+S utters to A: "p but I know q".
+
+S explicitly acknowledges A won't believe p.
+
+S therefore cannot intend A to believe p.
+
+Here, we have a clear audience, A. The speaker does not say this with the intention of producing a belief in A, as they know that it will not work. Yet, they clearly mean something by saying it. So, it follows that meaning does not always require intention to produce belief, which contradicts Grice’s theory. 
+
+<Center> Case B: </Center>
+I (S) am getting tortured by people (A) who think I committed a crime against their friend.
+
+I (S) know that A will not believe any denial.
+
+I (S) asserts "I didn't do it" to A.
+
+I (S) does not intend A to believe the denial.
+
+In this case, I keep telling the torturers that I didn’t do it – that I did not commit a crime against their friend. However, I know that telling them this will not stop them from torturing me. There is no way for me to change their belief in me. But, I continue to tell them that I am innocent. When I say this I know that they will not believe me and I have no intention for them to believe me, but I say it anyway. How can there be no meaning in what I am saying? How can it be that my self-expression and objection has no meaning?
+
+### Problem (3)
+<Center> Case A: </Center>
+Let U be “I love you”. 
+
+Situation 1:
+
+S utters U to A1, who is a partner of 10 years.
+
+Situation 2:
+
+S utters U to A2, who is a partner of 1 week.
+
+In both situations, the intention behind the utterance U is to showcase love and express a strong positive feeling. However, the meaning of each situation is different. In situation 1, the meaning of U is commitment, a promise to always be there for A1. In situation 2, however, the meaning of U is passion, founded by a newfound interest in A2. Although the meanings are different, Grice’s theory would consider it to be the same since meaning stems only from the intention and utterance (which are the same in both situations). 
+
+<Center> Case B: </Center>
+S is in the group G where chanting U begins
+
+S joins in uttering U S does not consciously decide to chant 
+
+S does not intend to communicate to any specific A 
+
+S does not intend to produce beliefs 
+
+S decides to chant because the other people in G are chanting. In Grice’s theory, meaning requires intention which is belief-producing. However, in this case, by construction, there is no conscious intention and no belief goal, yet there is a meaningful utterance. Therefore, there must exist another component that is fundamental to meaning, outside of intention and belief. 
+
+## THE SOLUTION
+From the (3) types of problems shown in the counterexamples, we can see that the main pitfall of Grice’s theory is that he does not account for the fact that meaning can exist independently of an audience or intention to create belief. Therefore, we must build a theory of meaning that is more flexible yet rigid enough that it does not consider unmeaningful utterances as having meaning.
+
+<Center> Meaning = f(A, I, C) </Center>
+Meaning is a function of A, I and C, where
+
+A = Action or Expression: any observable behavior or linguistic act
+
+I = Intention: the underlying purpose or motivational state (broader than belief-induction)
+
+C = Context: the environmental, relational, and social conditions in which the act occurs
+
+### Action/Expression
+Action or Expression is any observable behavior, whether verbal, bodily, or symbolic, that constitutes an action. This includes speech acts, gestures, facial expressions, writing, chanting, or ritualized behavior. Actions provide meaning even when not directed toward any audience. 
+
+### Intention
+The purposive or expressive aim that underlies an action. Unlike Grice’s theory, it is not limited to intending a belief change. It may include: expressive intention, where you externalize an internal state, performative intention, where you enact a social act, and metacognitive intention, where you clarify one’s own thoughts.
+
+### Context 
+The total set of situational, social, and relational parameters that encompass the action/expression. This includes situational context, which is the physical environment, time, setting, interpersonal context, which is the relationship between S and A, and cultural context, which includes shared conventions, social scripts, and social norms.
+
+### Meaning Definition
+Speaker S’s act A means proposition p in context C if and only if there exists an intention I (expressive, performative, or communicative) such that: 
+- A is performed under I in context C, and 
+- C provides a framework in which A under I is conventionally, emotionally, or socially interpretable as p.
+
+By reconstructing Grice’s theory, we have built a theory of meaning that is still based on the speaker but does not only focus on inducing belief. The theory allows for meaning to exist without observers as it is not a component of meaning function (solving problem (1)). Furthermore, it is belief independent, so acts like diary writing, smiling, or chanting carry meaning regardless of their effect on belief (solving problem (2)). Lastly, the theory is context-sensitive so identical actions can convey very different information depending on situational factors (solving problem (3)).
+
+<br></br><br></br><br></br><br></br><br></br>
+
+## <Center> PAPER 3 </Center>
+# <Center> Making Sense Out of Nonsense: Exploring What Makes a Sentence Meaningful </Center> 
+
+## MOTIVATION 
+Across philosophy of language, many theorists have tried to explain what makes a sentence meaningful. Traditional semantic theories emphasize truth-conditions, compositional structure, and stable linguistic conventions. Kripke’s skeptical interpretation of Wittgenstein in his paper “From On Rules and Private Language” raises doubts about whether private rules can truly fix meaning. Pragmatic theorists such as Grice (in his paper “Logic and Convention”) and later Bach (in his paper “Conversational Impliciture”) argue that meaning is largely a matter of rational inference, context, and communicative intentions. Each theory captures something important, providing unique insights into what it means for a sentence to be meaningful, but also faces limitations that restrict it from truly capturing the nuances of language and its meanings. Therefore, to build a complete theory of meaning, we should take a hybrid approach, grounded on the strengths and weaknesses of each individual theory. 
+
+## TRADITIONAL SEMANTIC THEORY
+Traditional semantic theories hold that a sentence is meaningful when it has a determinate semantic content, typically expressed through truth-conditions. Compositional rules map words to meanings and predict how larger units derive their content. Communication works because speakers share a language: a system of conventions, grammars, and meanings.
+
+### Strengths 
+A key strength of the traditional view is that it explains how sentences have stable meanings across speakers. Children acquire language through exposure to predictable patterns; formal disciplines (mathematics, logic, legal discourse) rely on stable meanings that do not shift moment to moment. If speakers follow the same rules, listeners can decode meaning with relatively little uncertainty. Shared conventions make communication efficient, enabling rule-governed teaching, translation, and explanation.
+
+### Weaknesses 
+However, Davidson’s “A Nice Derangement of Epitaphs” makes an important point against traditional semantic theory by arguing that no two speakers follow the same rules. He emphasizes how we continue to understand people who break conventions, misuse words, or invent expressions on the spot. Meaning persists despite deviations from any fixed code. So, understanding involves attributing beliefs, desires, and intentions to speakers, not merely applying grammatical rules. This means semantics alone cannot explain interpretation. It is important to note that Davidson himself admits that, without minimal shared usage, interpretation collapses (although this is quite radical in the sense that he does not believe we need to share much). A listener cannot infer a speaker’s intentions out of nothing. Thus, even Davidson’s radical interpretation presupposes some conventions, even if looser than traditional theories suggest.
+
+Traditional semantics offers stability and determinacy but fails to capture how meaning emerges dynamically in context, especially when speakers violate conventional rules.
+
+## KRIPKE ON RULE-FOLLOWING
+Kripke’s “Wittgenstein on Rules and Private Language” challenges the very idea that meaning is fixed by personal intention or internal mental states. The skeptical paradox demonstrates that nothing in a speaker’s past behavior determines whether they meant plus or quus when using “+.” This leads to the skeptical conclusion that meaning is not grounded in facts about individuals but in public communal norms governing correct usage. 
+
+### Strengths
+Kripke explains why meaning is normative; in other words, why some uses are considered correct and others incorrect. He argues that meaning is not grounded in facts but in communal practice. What fixes meaning is how the linguistic community treats a speaker’s responses, what counts as correct or incorrect according to shared norms and reactions, and patterns of agreement among people. The community’s training, expectations, and reactions create public standards. If meaning were grounded in private mental states or intentions and not the general community, no one could verify correctness. Words could be used without regard to what they actually “mean”. 
+
+### Weaknesses 
+A key weakness of Kripke’s theory is that communities often disagree about correct usage. Two competent English speakers can both be unsure about the right meaning of “literally,” “gender,” or “game.” If norms determine meaning, disagreement should not be possible. 
+
+Furthermore, individuals clearly understand novel uses without consulting community norms (a key idea in Davidson’s paper). Speakers can innovate, extend meanings metaphorically, and be understood even when norms do not yet exist. So, how can meaning be only bound by norms? There has to be something more. Kripke’s framework struggles to explain why some rule systems remain stable despite disagreement. 
+
+Kripke highlights the essential role of public normativity, but the view overplays communal agreement and leaves too little room for individual interpretation, creativity, and speaker intentions. 
+
+## PRAGMATICS 
+Grice argues that literal meaning (semantics) is only part of what we communicate. Much more is conveyed through conversational implicatures, which depend on the Cooperative Principle and maxims. Bach extends this by emphasizing that listeners compute both explicit content (semantically determined) and implicit content (inferentially determined). 
+
+### Strengths 
+Grice argues that conversation works because speakers generally try to cooperate with each other (cooperative principle) and follow four general conversational maxims: quantity, quality, relation and manner. When a speaker utters a sentence where a maxim fails, we as hearers do not first assume that they are trying to not properly communicate with us, but rather understand that there might be more to the sentence than what is explicitly said and focus on what is implied. Pragmatics explains why “What time is it?” does not literally require seconds-level precision (ex. 9:13AM 37 seconds), or why “Can you pass the salt?” is understood as a request, not a question about ability. Meaning is shaped by what the speaker intends to communicate, not only by what the words strictly encode (what the speaker simply says). 
+
+Bach emphasizes flexibility by mentioning that not every apparent maxim violation produces an implicature. Furthermore, he makes a key distinction between explicit content, which is determined by what is said and focuses on syntax and semantics with implicit content, which is what is implied and is based on contextual inference. In his theory, interpretation of what is implied depends on rationality, context, and shared background knowledge, which accommodates for nuances on what is said. We see, from this, that meaning is dynamically constructed in discourse rather than fixed by rules alone.
+
+### Weaknesses
+Pragmatic inference can produce multiple interpretations. If meaning depends too much on inference, why do misunderstandings not occur constantly? Literal meaning must be stable for implicatures to be computed. Gricean theories presuppose semantic determinacy; they cannot stand alone. Furthermore, Grice’s view overexaggerates intention. Speakers often fail to have clear communicative intentions, yet we still understand them.
+
+Pragmatic theories capture real-world flexibility and rational inference but require an underlying semantic and normative structure and struggle with intentional vagueness.
+
+## HYBRID THEORY
+From the strengths and weaknesses of previous theories, we find that traditional semantics gives us determinacy, Kripke gives us normativity and Grice and Bach give us intention-sensitive contextual flexibility. From this, we can build a framework that incorporates all three without reducing meaning to any one factor.  
+
+### Conditions for Meaning
+A sentence, s, to be meaningful if and only if has these three following properties: 
+1. Semantic Determinacy: A sentence must have a core content that is shareable, learnable, and stable enough to support truth-conditions, ground communication across contexts, and enable others to acquire meaning. This content is not a complete blueprint for interpretation but provides a ground for meaning.
+2. Public Normativity: Meaning requires that there exist public patterns of usage against which interpretations are measured. These patterns need not be perfectly shared rules but must provide community-wide expectations, broadly accessible correctness conditions, and boundaries that prevent private idiosyncrasies from determining meaning. This satisfies Kripke’s insight without demanding full consensus.
+3. Pragmatic Elaboration: Literal meaning underdetermines what the speaker communicates. Interpretation thus depends on the speaker’s communicative intention, the listener’s rational reconstruction of that intention, background knowledge, conversational setting, and common ground. There is more to a sentence than what is explicitly uttered. 
+ 
+Meaning becomes complete in context and is not fixed prior to communication. A sentence is meaningful when three conditions are jointly satisfied. It has minimal determinate content grounded in semantics. It is embedded in public norms of use that shape correctness. Its communicated meaning is computed through pragmatic inference about speaker intentions in context. Meaning is thus neither fully fixed nor fully fluid, neither purely communal nor entirely individual. It arises from an interplay among rules, norms, and rational interpretation. The hybrid theory preserves the strengths of each approach while avoiding their weaknesses, offering a more complete and realistic account of what makes a sentence meaningful.
