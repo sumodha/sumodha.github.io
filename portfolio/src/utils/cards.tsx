@@ -263,7 +263,7 @@ export const cards = [
     {
         type: "other",
         slug: "sketchbook",
-        imgSrc: "art.jpg", 
+        imgSrc: "art.JPG", 
         title:"🌟 Sketchbook", 
         role: "", 
         githubLink: "", 
