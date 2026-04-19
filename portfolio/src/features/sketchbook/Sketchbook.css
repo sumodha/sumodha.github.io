@@ -69,6 +69,7 @@
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.4);
   margin: 0;
+  text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -362,6 +363,7 @@
 
 .sketchbook__cover-text {
   font-family: "Canela", Georgia, serif;
+  text-align: center;
   font-style: italic;
   font-size: 1.2rem;
   color: #444;
@@ -389,6 +391,7 @@
 
 .sketchbook__back-cover .sketchbook__cover-text {
   color: white;
+  text-align: center;
 }
 
 /* ── spine shadow ───────────────────── */
@@ -540,6 +543,9 @@
   .sketchbook__cover-title {
     font-size: 1.5rem;
   }
+  .sketchbook__back-cover .sketchbook__cover-text {
+font-size: 0.75rem;
+}
 
   .sketchbook__face {
     padding: 12px;
