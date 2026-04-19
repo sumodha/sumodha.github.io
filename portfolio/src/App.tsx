@@ -3,7 +3,7 @@ import HomePage from './routes/HomePage';
 import ProjectPage from './routes/ProjectPage';
 import ScrollToTop from './components/ScrollToTop';
 import NotFound from './routes/NotFound'
-
+import SketchbookPage from './routes/SketchbookPage';
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
     <ScrollToTop></ScrollToTop>
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/portfolio/sketchbook" element={<SketchbookPage></SketchbookPage>} />
       <Route path="/portfolio/:slug" element={<ProjectPage />} />
       {/* Catch-all route */}
         <Route path="*" element={<NotFound />} />

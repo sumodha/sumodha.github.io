@@ -1,6 +1,7 @@
 import NASASuits2025Content from '../projects/nasa-suits-2025.mdx';
 import NASASuits2026Content from '../projects/nasa-suits-2026.mdx';
 import Breakthrough2023Content from '../projects/breakthrough-2023.mdx';
+import Breakthrough2022Content from '../projects/breakthrough-2022.mdx';
 import DigitsContent from '../projects/digits.mdx';
 import AirAllianceHoustonContent from '../projects/aah.mdx';
 import SproutContent from '../projects/sprout.mdx';
@@ -14,6 +15,7 @@ import RiceArVrContent from '../projects/rice-ar-vr.mdx';
 import RiceUniversityOASUSContent from '../projects/rice-oasus.mdx';
 import RiceUniversityCSContent from '../projects/rice-cs.mdx';
 import Phil318Content from '../projects/phil-318.mdx';
+import AbstractThoughtsContent from '../projects/abstract-thoughts.mdx';
 
 
 export const cards = [
@@ -145,7 +147,7 @@ export const cards = [
     },
     {
         type: "leadership",
-        slug: "",
+        slug: "breakthrough-2022",
         imgSrc: "assistant.jpg", 
         title:"Breakthrough ", 
         role: "TEACHING ASSISTANT", 
@@ -153,7 +155,8 @@ export const cards = [
         externalLink: "https://breakthroughcollaborative.org/", 
         text: "assisted and communicated with 25+ teachers and directors daily; served as a role model, assisted with transportation services and organized activities for 350+ middle school and high school students",
         date: "JUN - AUG 2022",
-        skills: []
+        skills: [], 
+        Content: Breakthrough2022Content
 
 
     },
@@ -247,6 +250,29 @@ export const cards = [
     },
     {
         type: "other",
+        slug: "abstract-thoughts",
+        imgSrc: "papers.jpeg", 
+        title:"🌟 Abstract Thoughts", 
+        role: "", 
+        githubLink: "", 
+        externalLink: "", 
+        text: "reading, outlining, and thinking through academic research and papers",
+        skills: [], 
+        Content: AbstractThoughtsContent
+    },
+    {
+        type: "other",
+        slug: "sketchbook",
+        imgSrc: "art.jpg", 
+        title:"🌟 Sketchbook", 
+        role: "", 
+        githubLink: "", 
+        externalLink: "", 
+        text: "a collection of my art",
+        skills: []
+    },
+    {
+        type: "other",
         slug: "phil-318",
         imgSrc: "phil.webp", 
         title:"Philosphy of Language", 
@@ -256,7 +282,7 @@ export const cards = [
         text: "papers for Philosophy of Language (PHIL 318) class at Rice University, taught by Brian Miller",
         skills: [], 
         Content: Phil318Content
-    }
+    },
 
 ]
 

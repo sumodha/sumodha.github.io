@@ -1,0 +1,551 @@
+/* ── sketchbook wrapper ─────────────── */
+.sketchbook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0px;
+}
+
+/* kraft paper texture background */
+.sketchbook::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(0,0,0,0.015) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 50%, rgba(0,0,0,0.01) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── cover front face (black cover) ─── */
+.sketchbook__face--cover-front {
+  background: #111;
+  border-radius: 0 4px 4px 0;
+  box-shadow:
+    inset -2px 0 12px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.sketchbook__face--cover-front::before {
+  display: none;
+}
+
+.sketchbook__face--cover-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.sketchbook__cover-front-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.sketchbook__cover-title {
+  font-family: "Canela", Georgia, serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.sketchbook__cover-line {
+  width: 50px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sketchbook__cover-author {
+  font-family: "Canela-Regular", Georgia, serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ── title page (inside cover, left side) ── */
+.sketchbook__title-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 8px;
+}
+
+.sketchbook__title-page-name {
+  font-family: "Canela", Georgia, serif;
+  font-style: italic;
+  font-size: 2rem;
+  color: #000;
+  margin: 0;
+}
+
+.sketchbook__title-page-author {
+  font-family: "Canela-Regular", Georgia, serif;
+  font-size: 0.9rem;
+  color: #8e8e93;
+  margin: 0;
+}
+
+.sketchbook__title-page-sub {
+  font-family: "Canela-Regular", Georgia, serif;
+  font-size: 0.78rem;
+  color: #bbb;
+  margin: 8px 0 0;
+  font-style: italic;
+}
+
+/* ── left side art display ─────────── */
+.sketchbook__left-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 24px;
+  width: 100%;
+}
+
+/* ── 3D book scene ──────────────────── */
+.sketchbook__scene {
+  perspective: 1800px;
+  perspective-origin: 50% 50%;
+  width: 720px;
+  height: 500px;
+  z-index: 2;
+}
+
+.sketchbook__book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(6deg);
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* cover centered on screen */
+.sketchbook__book--closed {
+  transform: rotateX(6deg) translateX(-25%);
+}
+
+/* normal two-page spread */
+.sketchbook__book--open {
+  transform: rotateX(6deg) translateX(0);
+}
+
+/* back cover — also centered */
+.sketchbook__book--back {
+  transform: rotateX(6deg) translateX(-25%);
+}
+
+/* ── page ───────────────────────────── */
+.sketchbook__page {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.sketchbook__page.flipped {
+  transform: rotateY(-180deg);
+}
+
+.sketchbook__page--hidden {
+  visibility: hidden;
+  transition: none;
+}
+
+.sketchbook__page--hidden.flipped {
+  visibility: hidden;
+  transition: none;
+}
+
+/* cover page: when closed, spans full book width */
+.sketchbook__page--cover {
+  border-radius: 4px;
+}
+
+.sketchbook__page--cover .sketchbook__face--cover-front {
+  border-radius: 4px;
+}
+
+.sketchbook__page--cover.flipped .sketchbook__face--cover-front {
+  border-radius: 0 4px 4px 0;
+}
+
+/* front and back of each page */
+.sketchbook__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 0 4px 4px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* front face — shows the art */
+.sketchbook__face--front {
+  background: #faf9f6;
+  box-shadow:
+    inset -2px 0 8px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* back face — rotated so it reads correctly when flipped */
+.sketchbook__face--back {
+  background: #f7f6f3;
+  transform: rotateY(180deg);
+  box-shadow:
+    inset 2px 0 8px rgba(0, 0, 0, 0.06),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* paper edge texture line on front */
+.sketchbook__face--front::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5%;
+  bottom: 5%;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* subtle page grain */
+.sketchbook__face--front::after,
+.sketchbook__face--back::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* ── art image ──────────────────────── */
+.sketchbook__art-wrapper {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.sketchbook__art {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
+  filter: saturate(0.9);
+}
+
+/* placeholder when image fails */
+.sketchbook__art-placeholder {
+  width: 80%;
+  height: 70%;
+  background: #eee;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-size: 2rem;
+}
+
+/* ── art caption on front ───────────── */
+.sketchbook__caption {
+  text-align: center;
+  width: 100%;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sketchbook__art-title {
+  font-family: "Canela", Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #000;
+  margin: 0 0 2px;
+}
+
+.sketchbook__art-detail {
+  font-family: "Canela-Regular", Georgia, serif;
+  font-size: 0.78rem;
+  color: #8e8e93;
+  margin: 0;
+}
+
+.sketchbook__art-page-num {
+  font-size: 0.7rem;
+  color: #ccc;
+  margin: 4px 0 0;
+  font-family: -apple-system, sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ── back face content ──────────────── */
+.sketchbook__back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ccc;
+}
+
+.sketchbook__back-num {
+  font-family: "Canela", Georgia, serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.06);
+}
+
+/* ── left side (cover / back) ───────── */
+.sketchbook__cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.sketchbook__cover--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: none;
+}
+
+.sketchbook__cover--visible {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.sketchbook__cover--back {
+  background: #1a1a1a;
+  box-shadow:
+    inset 2px 0 12px rgba(0, 0, 0, 0.3),
+    -4px 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.sketchbook__cover--info {
+  background: #f7f6f3;
+  box-shadow: inset 2px 0 8px rgba(0, 0, 0, 0.06);
+}
+
+.sketchbook__cover-text {
+  font-family: "Canela", Georgia, serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #444;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+/* ── back cover (right side, always present behind pages) ── */
+.sketchbook__back-cover {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #111;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    inset -2px 0 12px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  z-index: 1;
+}
+
+.sketchbook__back-cover .sketchbook__cover-text {
+  color: white;
+}
+
+/* ── spine shadow ───────────────────── */
+.sketchbook__spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.03) 40%,
+    rgba(0, 0, 0, 0.0) 50%,
+    rgba(0, 0, 0, 0.03) 60%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 200;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sketchbook__spine--hidden {
+  opacity: 0;
+}
+
+.sketchbook__spine--visible {
+  opacity: 1;
+}
+
+/* ── book shadow on surface ─────────── */
+.sketchbook__shadow {
+  width: 680px;
+  height: 30px;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(0, 0, 0, 0.12) 0%,
+    transparent 70%
+  );
+  margin-top: 10px;
+  z-index: 1;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sketchbook__shadow--centered {
+  transform: translateX(-12.5%);
+  width: 400px;
+}
+
+/* ── nav controls ───────────────────── */
+.sketchbook__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  z-index: 2;
+}
+
+.sketchbook__nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  background: #fff;
+  color: #000;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-family: -apple-system, sans-serif;
+}
+
+.sketchbook__nav-btn:hover:not(:disabled) {
+  background: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.sketchbook__nav-btn:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.sketchbook__page-indicator {
+  font-family: "Canela-Regular", Georgia, serif;
+  font-size: 0.9rem;
+  color: #8e8e93;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* ── keyboard hint ──────────────────── */
+.sketchbook__hint {
+  margin-top: 16px;
+  font-size: 0.72rem;
+  color: #ccc;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: -apple-system, sans-serif;
+  z-index: 2;
+}
+
+.sketchbook__hint-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  margin: 0 2px;
+  vertical-align: middle;
+  color: #aaa;
+}
+
+/* ── responsive ─────────────────────── */
+@media (max-width: 780px) {
+  .sketchbook__scene {
+    width: 92vw;
+    height: 340px;
+  }
+
+  .sketchbook__shadow {
+    width: 88vw;
+  }
+
+  .sketchbook__cover-title {
+    font-size: 1.8rem;
+  }
+
+  .sketchbook__face {
+    padding: 16px;
+  }
+
+  .sketchbook__art-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sketchbook__scene {
+    height: 280px;
+  }
+
+  .sketchbook__cover-title {
+    font-size: 1.5rem;
+  }
+
+  .sketchbook__face {
+    padding: 12px;
+  }
+
+  .sketchbook__hint {
+    display: none;
+  }
+}
