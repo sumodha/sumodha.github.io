@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom';
-import { getProjectBySlug } from '../utils/cards';
-import { getImageURL } from '../utils/image-utils';
-import NavBar from '../features/navbar/NavBar.tsx';
-import Footer from '../features/footer/Footer.tsx';
+import { getProjectBySlug } from '../../utils/cards.tsx';
+import { getImageURL } from '../../utils/image-utils.tsx';
+import NavBar from '../../features/navbar/NavBar.tsx';
+import Footer from '../../features/footer/Footer.tsx';
 import './ProjectPage.css'
-import NotFound from './NotFound.tsx'
+import NotFound from '../NotFound/NotFound.tsx'
 import { useEffect } from "react";
 import { MDXProvider } from '@mdx-js/react'
-import { mdxComponents } from '../components/mdxComponents.tsx'
+import { mdxComponents } from '../../components/mdxComponents/mdxComponents.tsx'
 import 'katex/dist/katex.min.css';
 
 function ProjectPage() {

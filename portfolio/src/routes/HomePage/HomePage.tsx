@@ -1,14 +1,14 @@
-import NavBar from '../features/navbar/NavBar.tsx';
-import HomeSection from '../features/home-section/HomeSection.tsx';
-import SkillsSection from '../features/skills-section/SkillsSection.tsx';
+import NavBar from '../../features/navbar/NavBar.tsx';
+import HomeSection from '../../features/home-section/HomeSection.tsx';
+import SkillsSection from '../../features/skills-section/SkillsSection.tsx';
 import './HomePage.css'
-import Footer from '../features/footer/Footer.tsx';
-import WorkSection from '../features/work-section/WorkSection.tsx';
-import LeadershipSection from '../features/leadership-section/LeadershipSection.tsx';
-import ProjectsSection from '../features/projects-section/ProjectsSection.tsx';
+import Footer from '../../features/footer/Footer.tsx';
+import WorkSection from '../../features/work-section/WorkSection.tsx';
+import LeadershipSection from '../../features/leadership-section/LeadershipSection.tsx';
+import ProjectsSection from '../../features/projects-section/ProjectsSection.tsx';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import OtherSection from '../features/other-section/OtherSection.tsx';
+import OtherSection from '../../features/other-section/OtherSection.tsx';
 
 
 function HomePage () {

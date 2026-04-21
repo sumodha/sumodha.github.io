@@ -1,5 +1,5 @@
-import NavBar from '../features/navbar/NavBar.tsx';
-import Footer from '../features/footer/Footer.tsx';
+import NavBar from '../../features/navbar/NavBar.tsx';
+import Footer from '../../features/footer/Footer.tsx';
 import './NotFound.css'
 import { useEffect } from "react";
 

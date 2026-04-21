@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './routes/HomePage';
-import ProjectPage from './routes/ProjectPage';
-import ScrollToTop from './components/ScrollToTop';
-import NotFound from './routes/NotFound'
-import SketchbookPage from './routes/SketchbookPage';
+import HomePage from './routes/HomePage/HomePage';
+import ProjectPage from './routes/ProjectPage/ProjectPage';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import NotFound from './routes/NotFound/NotFound'
+import SketchbookPage from './routes/SketchbookPage/SketchbookPage';
 
 function App() {
 
