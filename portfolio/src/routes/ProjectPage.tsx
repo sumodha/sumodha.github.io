@@ -8,8 +8,7 @@ import NotFound from './NotFound.tsx'
 import { useEffect } from "react";
 import { MDXProvider } from '@mdx-js/react'
 import { mdxComponents } from '../components/mdxComponents.tsx'
-
-
+import 'katex/dist/katex.min.css';
 
 function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();

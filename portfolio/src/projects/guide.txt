@@ -1,0 +1,7 @@
+Inline: <InlineMath math="E = mx^2" />
+
+Block:
+<BlockMath math="\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}" />
+
+Center:
+<Center> content </Center> 
