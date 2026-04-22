@@ -280,7 +280,7 @@ export const cards = [
         githubLink: "", 
         externalLink: "", 
         text: "papers for Philosophy of Language (PHIL 318) class at Rice University, taught by Brian Miller",
-        date: "AUG 2025 - DEC 2025",
+        date: "AUG - DEC 2025",
         skills: [], 
         Content: Phil318Content
     },
