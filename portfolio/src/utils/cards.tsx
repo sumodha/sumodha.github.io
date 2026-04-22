@@ -185,7 +185,7 @@ export const cards = [
         githubLink: "", 
         externalLink: "", 
         text: "a low-cost rover that autonomously explores lunar craters and lava tubes to locate and sample water deposits; worked on a Gazebo-based simulation", 
-        date: "AUG 2024 - Aug 2025",
+        date: "AUG 2024 - AUG 2025",
         skills: ["Python", "URDF", "ROS2", "Gazebo", "Ollama", "Linux", "RViz", "Docker"],
         Content: RiceRoboticsContent
         
@@ -228,7 +228,7 @@ export const cards = [
         githubLink: "https://github.com/sumodha/CareNet", 
         externalLink: "https://devpost.com/software/carenet-eoip85", 
         text: "a full-stack app with a user-centric conversational AI to guide users in finding and connecting with 550+ federal/state social welfare programs", 
-        date: "",
+        date: "SEPT 19-21, 2025",
         skills: ["JavaScript", "Python", "React", "TailwindCSS", "Flask"], 
         Content: CareNetContent
 
@@ -243,7 +243,7 @@ export const cards = [
         githubLink: "https://github.com/auriyoyo/FTC2024", 
         externalLink: "https://www.youtube.com/@aerorobotics9850", 
         text: "an autonomous robot for the First Tech Challenge (FTC) Centerstage season by team 10143 Aero Robotics", 
-        date: "",
+        date: "AUG 2023 - MAY 2024",
         skills: ["Java", "OpenCV", "TensorFlow"], 
         Content: BowBotContent
     
