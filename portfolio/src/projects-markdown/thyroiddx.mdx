@@ -1,3 +1,163 @@
+# Introduction 
+ThyroidDx is a full-stack web application that predicts **whether a patient has hypothyroidism, hyperthyroidism, or no thyroid disease based on routine blood work tests** (such as TSH, T3, TT4, T4U, FTI, TBG, etc), as well as other inidictions (such as if they are sick, if they have a tumor, etc). It **asks 17 questions** and **uses a neural network model for prediction**.
+
+## MOTIVATION: WHY THYROIDDX? 
+In Fall 2024 (first year of my freshman year at Rice), I joined Data Exploration and Experiential Projects [(DEEP)](https://d2k.rice.edu/news/rice-data-science-club), which is a semester long program where students learn about the whole data science pipeline through analysis of datasets. Before this, I had watched many youtube videos (specifically 3blue1brown) on ML algorithms and theory, but never did any practical applications of it (i.e building a project). I participated in the program in hopes of building foundational data science skills and working with machine learning algorithms. I wanted to specifically work with the thyroid disease dataset because of my interest of using algorithms for detection of diseases; it combined my two favorite disciplines: computer science and medicine. 
+
+Around the same time, I build digits to learn web development (see more about digits [here](https://sumodha.github.io/portfolio/digits))! I wanted to continue building my web development skills so I used the model I had already built and made a user interface that people could actually interact with! 
+
+# Features
+- **Diagnosis via Neural Network Model** 
+    - Submits patient data to a trained ML model (via a Flask REST API) that returns a thyroid condition diagnosis in real time
+    - Model is pre-trained and served as a pickled .pkl file, making predictions fast and stateless
+- **Interactive Patient Form** - a guided input form collects 17 clinical features used by the model:
+    - Demographics: age, and sex
+    - Medical history (yes/no): currently on thyroxine (t4), on antithyroid medication, currently sick, pregnant, history of thyroid surgery, history of I-131 (radioactive iodine) treatment, self-reported query for hypothyroidism, self-reported query for hyperthyroidism, presence of goitre, and presence of tumor
+    - Lab results (numeric): TSH (thyroid stimulating hormone), T3 (triiodothyronine), TT4 (total thyroxine), T4U (thyroxine uptake) and FTI (free thyroxine index)
+
+
+# Data Processing
+## PREPROCSSING DATA
+- **Dropped features** that had over 50% null values
+- Autofilled hormone levels (for those not measured) using **imputation**
+- Used **one hot encoding** for target column 
+- Utilized **label encoding** for features with yes/no questions
+- **Standardized** numeric features (i.e lab results)
+
+## VISUALIZING DATA 
+### <Center> Hormone Levels By Age, By Thyroid Type </Center>
+![TT4](/projects-markdown-images/thyroiddx/image1.png)
+*<Center>Figure 1: TT4 vs Age, by Thyroid Type</Center>*
+![T3](/projects-markdown-images/thyroiddx/image2.png)
+*<Center>Figure 2: T3 vs Age, by Thyroid Type</Center>*
+![FTI](/projects-markdown-images/thyroiddx/image3.png)
+*<Center>Figure 3: FTI vs Age, by Thyroid Type</Center>*
+![T4U](/projects-markdown-images/thyroiddx/image4.png)
+*<Center>Figure 4: T4U vs Age, by Thyroid Type</Center>*
+![TSH](/projects-markdown-images/thyroiddx/image5.png)
+*<Center>Figure 5: TSH vs Age, by Thyroid Type</Center>*
+<Center>Notice that average TSH values **appear higher** for younger patients with hypothyroidism</Center>
+
+## DATA MODELING 
+### Multi-Class Logistic Regresstion
+```
+Accuracy: 0.94
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+Hyperthyroidism       0.78      0.42      0.55        43
+ Hypothyroidism       0.84      0.50      0.63       115
+         Normal       0.95      0.99      0.97      1615
+
+       accuracy                           0.94      1773
+      macro avg       0.86      0.64      0.72      1773
+   weighted avg       0.94      0.94      0.94      1773
+```
+
+### Decision Tree
+![Decision Tree](/projects-markdown-images/thyroiddx/image6.png)
+*<Center>Figure 6: Visualization of Decision Tree</Center>*
+```
+Accuracy: 0.98
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+Hyperthyroidism       0.67      0.65      0.66        43
+ Hypothyroidism       0.96      0.97      0.97       115
+         Normal       0.99      0.99      0.99      1615
+
+       accuracy                           0.98      1773
+      macro avg       0.87      0.87      0.87      1773
+   weighted avg       0.98      0.98      0.98      1773
+```
+
+### Random Forest 
+```
+Accuracy: 0.98
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+Hyperthyroidism       0.83      0.44      0.58        43
+ Hypothyroidism       0.93      0.99      0.96       115
+         Normal       0.98      0.99      0.99      1615
+
+       accuracy                           0.98      1773
+      macro avg       0.91      0.81      0.84      1773
+   weighted avg       0.98      0.98      0.98      1773
+```
+
+### SVM Model
+```
+Accuracy: 0.95
+
+Classification Report:
+                  precision    recall  f1-score   support
+
+Hyperthyroidism       0.81      0.40      0.53        43
+ Hypothyroidism       0.85      0.56      0.67       115
+         Normal       0.95      0.99      0.97      1615
+
+       accuracy                           0.95      1773
+      macro avg       0.87      0.65      0.73      1773
+   weighted avg       0.94      0.95      0.94      1773
+```
+
+### Neural Network (Multi-layer Perceptron classifier)
+```
+Accuracy: 0.97
+Classification Report:
+                  precision    recall  f1-score   support
+Hyperthyroidism       0.86      0.42      0.56        43
+ Hypothyroidism       0.87      0.84      0.85       115
+         Normal       0.97      0.99      0.98      1615
+
+       accuracy                           0.97      1773
+      macro avg       0.90      0.75      0.80      1773
+   weighted avg       0.96      0.97      0.96      1773
+```
+
+# Full-Stack Development
+## FRONTEND
+- Learned how to create a react form 
+- Built a popup by passing props into parent component
+- Performed basic form validation 
+
+## BACKEND (API REFERENCE)
+```
+POST /predict 
+ 
+Request: 
+{
+  "features": {
+    "age": 45,
+    "sex": 1,
+    "on_thyroxine": 0,
+    "on_antithyroid_meds": 0,
+    "sick": 0,
+    "pregnant": 0,
+    "thyroid_surgery": 0,
+    "I131_treatment": 0,
+    "query_hypothyroid": 1,
+    "query_hyperthyroid": 0,
+    "goitre": 0,
+    "tumor": 0,
+    "TSH": 5.2,
+    "T3": 1.8,
+    "TT4": 90.0,
+    "T4U": 1.1,
+    "FTI": 81.0
+  }
+}
+
+Response:
+{
+  "diagnosis": "hypothyroid"
+}
+```
+
 # Tech Stack
 - Frontend: React
 - Backend: Flask

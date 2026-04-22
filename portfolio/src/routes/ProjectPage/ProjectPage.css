@@ -100,7 +100,7 @@
 .project-content h2 {
   font-family: 'Helvetica';
   font-size: 1.7rem;
-  margin: 1.3rem 0 0.8rem;
+  margin: 1.7rem 0 1.3rem;
 }
 
 /* ### heading */
@@ -108,7 +108,7 @@
   font-family: 'Canela-Regular';
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 1rem 0 0.6rem;
+  margin: 1.3rem 0 1rem;
 }
 
 /* default paragraphs */
@@ -140,8 +140,26 @@
   color: #101069;
   text-decoration: underline;
 }
+/* code block */
+.project-content pre {
+  background: #f0f0f0;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
 
-/* code */
+.project-content pre code {
+  font-family: monospace;
+  font-size: 0.95rem;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  display: block;
+  white-space: pre;
+}
+
+/* inline code  */
 .project-content code {
   font-family: monospace;
   background: #f0f0f0;
