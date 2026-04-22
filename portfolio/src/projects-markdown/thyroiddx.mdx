@@ -8,12 +8,12 @@ Around the same time, I build digits to learn web development (see more about di
 
 # Features
 - **Diagnosis via Neural Network Model** 
-    - Submits patient data to a trained ML model (via a Flask REST API) that returns a thyroid condition diagnosis in real time
-    - Model is pre-trained and served as a pickled .pkl file, making predictions fast and stateless
+  - Submits patient data to a trained ML model (via a Flask REST API) that returns a thyroid condition diagnosis in real time
+  - Model is pre-trained and served as a pickled .pkl file, making predictions fast and stateless
 - **Interactive Patient Form** - a guided input form collects 17 clinical features used by the model:
-    - Demographics: age, and sex
-    - Medical history (yes/no): currently on thyroxine (t4), on antithyroid medication, currently sick, pregnant, history of thyroid surgery, history of I-131 (radioactive iodine) treatment, self-reported query for hypothyroidism, self-reported query for hyperthyroidism, presence of goitre, and presence of tumor
-    - Lab results (numeric): TSH (thyroid stimulating hormone), T3 (triiodothyronine), TT4 (total thyroxine), T4U (thyroxine uptake) and FTI (free thyroxine index)
+  - Demographics: age, and sex
+  - Medical history (yes/no): currently on thyroxine (t4), on antithyroid medication, currently sick, pregnant, history of thyroid surgery, history of I-131 (radioactive iodine) treatment, self-reported query for hypothyroidism, self-reported query for hyperthyroidism, presence of goitre, and presence of tumor
+  - Lab results (numeric): TSH (thyroid stimulating hormone), T3 (triiodothyronine), TT4 (total thyroxine), T4U (thyroxine uptake) and FTI (free thyroxine index)
 
 
 # Data Processing
@@ -32,11 +32,13 @@ Around the same time, I build digits to learn web development (see more about di
 *<Center>Figure 2: T3 vs Age, by Thyroid Type</Center>*
 ![FTI](/projects-markdown-images/thyroiddx/image3.png)
 *<Center>Figure 3: FTI vs Age, by Thyroid Type</Center>*
+<Center>Notice that there seems to be a **strong correlation** between TT4, T3, and FTI and thyroid disease diagnosis. Higher values indicate hyperthyroidism, while lower values indicate hypothyroidism. </Center>
 ![T4U](/projects-markdown-images/thyroiddx/image4.png)
 *<Center>Figure 4: T4U vs Age, by Thyroid Type</Center>*
+<Center>Notice that there seems to be **no correlation** between TSH and thyroid disease diagnosis.</Center>
 ![TSH](/projects-markdown-images/thyroiddx/image5.png)
 *<Center>Figure 5: TSH vs Age, by Thyroid Type</Center>*
-<Center>Notice that average TSH values **appear higher** for younger patients with hypothyroidism</Center>
+<Center>Notice that average TSH values **appear higher** for younger patients with hypothyroidism.</Center>
 
 ## DATA MODELING 
 ### Multi-Class Logistic Regresstion
