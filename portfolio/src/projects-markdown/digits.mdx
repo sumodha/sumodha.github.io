@@ -1,9 +1,72 @@
+# Introduction 
+Digits is a full-stack web application that recreates the New York Times Digits game after its discontinutation. For a little bit more background on Digits, users are presented a target number that they have to reach using 6 numbers and 4 basic operations (addition, subtraction, multiplication, division). To reach the target number, you do not need to necessarily use all numbers given. 
+![NYT Digits](/projects-markdown-images/digits/image1.png)
+*<Center>Figure 1: NYT Digits Game</Center>*
+
+## MOTIVATION: WHY DIGITS?
+In sophomore year of high school, my friend, Isabella, introduced me to the NYT Digits game. **I ABSOLUTELY LOVED THE GAME** and fell in love at first sight. Getting to work through numbers in my head, trying to reach the target number was so fun! I loved testing out some operations and numbers, realizing that they don't work, having a lightbulb moment, restarting and finally reaching the target (YAY!). I played it everyday of sopohmore year until I randomly stopped...
+
+In senior year of high school, Isabella brought up the game again. So, I went to the NYT website to play again and found out that they discontinued it. I was heartbroken; I couln't believe that they would not keep making digits game... **I knew I had to take matters into my own hands.** At the time, I wanted to learn web development by building a project, but I haven't exactly settled on an idea yet. This was my chance! I would recreate the NYT Digits game so I (and my friends...) would get to play again! 
+
+Digits is my **first full stack web application**! I hold the project close to my heart; over the years, I have added extra features, made the codebase more componentized, utilized the model-view-controller design pattern, etc and I hope to continue to add features here and there! 
+
+# Features 
+- **Daily Puzzles** — Five new puzzles served each day, pre-seeded for the entire year.
+- **Star Scoring** — Earn up to three stars per puzzle: exact match (☆☆☆), within 5 (☆☆), within 10 (☆).
+- **Step-by-Step Undo** — Backtrack moves one at a time. Full operation history is displayed alongside the board.
+- **Tab Persistence** — Switch freely between all five puzzles without losing progress (saved via local storage).
+- **Integer-Only Division** — Division that produces a decimal is rejected, keeping the math clean.
+
+# How to Play
+1. **Pick two numbers** — Tap any two of the six number tiles. 
+2. **Select an operation** — Choose +, −, ×, or ÷ from the toolbar. The result replaces the first number tile; the other is consumed.
+3. **Repeat or submit** — Keep combining until a tile is within 10 of the target. Select it and hit submit.
+
+# Full-Stack Development
+## FRONTEND
+- Learned **React fundamentals**: useState, useEffect, props, event handling, props, jsx syntax and functional components.
+- Utilized **best practices for CSS styling**, focusing on responsive and modern layouts, efficiency, reusability, consistency and organization.
+
+## BACKEND
+### API Reference 
+```
+GET /game 
+Returns today's set of five puzzles. The server determines the current date internally, so no parameters required.
+
+Response - 200 OK: 
+{
+  "items": {
+    "_id": "...",
+    "date": "4/22",
+    "data": [
+      {
+        "target": 284,
+        "numbers": [3, 7, 11, 14, 19, 22]
+      },
+      {
+        "target": 156,
+        "numbers": [2, 5, 9, 12, 18, 24]
+      }
+      // ... 5 puzzles total
+    ]
+  }
+}
+
+Response fields:
+- items.date (string): Date key in M/D format, e.g. "4/22"
+- items.data (array): Array of 5 puzzle objects
+- items.data[].target (number): Target number the player tries to reach (1–900)
+- items.data[].numbers (number[]): Six unique integers (1–25), sorted ascending
+```
+### Data Seeder 
+A standalone Node.js script (insertData.js) **pre-generates all 365 daily entries and bulk-inserts them into MongoDB**. Target numbers are derived by repeatedly applying random valid operations to the seed numbers, guaranteeing each puzzle is solvable and the target stays within 1–900.
+
 # Tech Stack
-- Frontend: React, TailwindCSS
-- Backend: Express.js, Node.js
-- Authenciation: JWT Authenciation
-- Database: MongoDB, PostgreSQL
-- Languages: TypeScript, CSS, JavaScript
+- **Frontend:** React, TailwindCSS
+- **Backend:** Express.js, Node.js
+- **Authenciation:** JWT Authenciation
+- **Database:** MongoDB, PostgreSQL
+- **Languages:** TypeScript, CSS, JavaScript
 
 # Resources & Links
 - [Github](https://github.com/sumodha/digits)

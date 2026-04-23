@@ -8,9 +8,9 @@ Around the same time, I build digits to learn web development (see more about di
 
 # Features
 - **Diagnosis via Neural Network Model** 
-  - Submits patient data to a trained ML model (via a Flask REST API) that returns a thyroid condition diagnosis in real time
-  - Model is pre-trained and served as a pickled .pkl file, making predictions fast and stateless
-- **Interactive Patient Form** - a guided input form collects 17 clinical features used by the model:
+  - Submits patient data to a trained ML model (via a Flask REST API) that returns a thyroid condition diagnosis in real time.
+  - Model is pre-trained and served as a pickled .pkl file, making predictions fast and stateless.
+- **Interactive Patient Form** - A guided input form collects 17 clinical features used by the model:
   - Demographics: age, and sex
   - Medical history (yes/no): currently on thyroxine (t4), on antithyroid medication, currently sick, pregnant, history of thyroid surgery, history of I-131 (radioactive iodine) treatment, self-reported query for hypothyroidism, self-reported query for hyperthyroidism, presence of goitre, and presence of tumor
   - Lab results (numeric): TSH (thyroid stimulating hormone), T3 (triiodothyronine), TT4 (total thyroxine), T4U (thyroxine uptake) and FTI (free thyroxine index)
@@ -18,11 +18,11 @@ Around the same time, I build digits to learn web development (see more about di
 
 # Data Processing
 ## PREPROCESSING DATA
-- **Dropped features** that had over 50% null values
-- Autofilled hormone levels (for those not measured) using **imputation**
-- Used **one hot encoding** for target column 
-- Utilized **label encoding** for features with yes/no questions
-- **Standardized** numeric features (i.e lab results)
+- **Dropped features** that had over 50% null values.
+- Autofilled hormone levels (for those not measured) using **imputation**.
+- Used **one hot encoding** for target column. 
+- Utilized **label encoding** for features with yes/no questions.
+- **Standardized** numeric features (i.e lab results).
 
 ## VISUALIZING DATA 
 ### <Center> Hormone Levels By Age, By Thyroid Type </Center>
@@ -123,9 +123,9 @@ Hyperthyroidism       0.86      0.42      0.56        43
 
 # Full-Stack Development
 ## FRONTEND
-- Learned how to create a react form 
-- Built a popup by passing props into parent component
-- Performed basic form validation 
+- Learned how to create a form and performed basic **form validation**.
+- Built a **pop-up** by passing **props** into parent component.
+- Continued using **React fundamentals** and **best practices for CSS styling** (see my first experience with React and CSS [here](https://sumodha.github.io/portfolio/digits)).
 
 ## BACKEND (API REFERENCE)
 ```
@@ -161,10 +161,10 @@ Response:
 ```
 
 # Tech Stack
-- Frontend: React
-- Backend: Flask
-- Data Processing: Pandas, NumPy, Scikit-Learn, Matplotlib
-- Languages: Python, TypeScript
+- **Frontend:** React
+- **Backend:** Flask
+- **Data Processing:** Pandas, NumPy, Scikit-Learn, Matplotlib
+- **Languages:** Python, TypeScript
 
 # Resources & Links
 - [Github](https://github.com/sumodha/thyroidDx)
