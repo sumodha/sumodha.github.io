@@ -28,7 +28,7 @@ export const cards = [
         githubLink: "https://github.com/rice-apps/aa-dashboard", 
         externalLink: "", 
         text: "rebuilt an existing, inaccessible dashboard, visualizing real-time air quality data from 40+ Houston monitoring stations for 10,000+ residents", 
-        date: "AUG 2025 - PRESENT",
+        date: "AUG 2025 - MAY 2026",
         skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"], 
         Content: AirAllianceHoustonContent
     },
@@ -41,7 +41,7 @@ export const cards = [
         githubLink: "https://github.com/Rice-ARVR/OWL-SUITS-2026-PR", 
         externalLink: "", 
         text: "built a mission-critical rover control interface for NASA that integrates live data from NASA’s TSS and autonomously navigates to lost LTV", 
-        date: "AUG 2025 - PRESENT",
+        date: "AUG 2025 - MAY 2026",
         skills: ["React", "TypeScript", "Python", "FastAPI", "MongoDB", "WebSockets"],
         Content: NASASuits2026Content
     },
@@ -54,7 +54,7 @@ export const cards = [
         githubLink: "", 
         externalLink: "https://thesproutapp.com", 
         text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
-        date: "AUG 2025 - PRESENT",
+        date: "AUG 2025 - MAY 2026",
         skills: ["Python", "Javascript", "React Native","PostgreSQL", "Flask", "Docker"], 
         Content: SproutContent
     },
@@ -108,8 +108,8 @@ export const cards = [
         role: "MATH 212 PEER EDUCATOR", 
         githubLink: "", 
         externalLink: "https://oasus.rice.edu/", 
-        text: "tutored fellow peers on key concepts and ideas in multivariable calculus; attented training and professional development workshops; planned and hosted an exam review session attented by 100+ students",
-        date: "JAN 2025 - PRESENT",
+        text: "worked as a peer educator for Multivariable Calculus (MATH 212)",
+        date: "JAN - MAY 2026",
         skills: [], 
         Content: RiceUniversityOASUSContent
 
@@ -123,7 +123,7 @@ export const cards = [
         role: "COMP 140 TA", 
         githubLink: "", 
         externalLink: "", 
-        text: "supported a 400+ class by hosting office hours, clarifying key concepts, guiding students through homework problems and assisting with course activities",
+        text: "served as a teaching assistant for Computational Thinking (COMP 140)",
         date: "AUG - DEC 2025",
         skills: [], 
         Content: RiceUniversityCSContent
@@ -153,7 +153,7 @@ export const cards = [
         role: "TEACHING ASSISTANT", 
         githubLink: "", 
         externalLink: "https://breakthroughcollaborative.org/", 
-        text: "assisted and communicated with 25+ teachers and directors daily; served as a role model, assisted with transportation services and organized activities for 350+ middle school and high school students",
+        text: "volunteered as a teaching assistant for Breakthrough non-profit",
         date: "JUN - AUG 2022",
         skills: [], 
         Content: Breakthrough2022Content
