@@ -1,3 +1,95 @@
+# Introduction
+Air Alliance is a nonprofit that works to **reduce the public health impacts from air pollution** and **advances environmental justice in the greater Houston community**. 
+
+## MOTIVATION: WHY AIR ALLIANCE?
+During the summer before freshman year of college, I participated in Moody Civics Immersion, a student led program hosted by Rice that explores social issues in Houston and helps students understand how to leverage their Rice education for a public purpose. The experience showed me how easy it was to help out the Houston community for the better of everyone; time and time again, the non-profits we visited would say how grateful they were for us and how much easier their task became.  Volunteering for just a couple hours of my day, I could help people who were struggling with food insecurity, those who fled home because of their sexuality, and the many impacted by the systematic placement of hazardous industrial facilities (leading to horrible air quality for the area and detrimental health issues). The experience **pushed me to continue to find volunteer opportunities that impacted the greater Houston area**. 
+
+In sophomore year, I joined RiceApps, a software organization that builds web applications for non-profits. **It’s software for social good!** 
+
+When I saw that one the projects was working with Air Alliance to rebuild their current air quality dashboard, I knew I had to join the team! **It would be the perfect opportunity to use my technical skills to help a cause that I support.** 
+
+## WHY BACKEND?
+Previously, I had built two full-stack web applications (see digits [here](https://sumodha.github.io/portfolio/digits) and thyroiddx [here](https://sumodha.github.io/portfolio/thyroiddx)). Although both were full-stack projects, the technical depth of the project was focused on the frontend and data processing work. I wanted to build upon my technical skills, so took a more **backend-focused role on this project**. 
+
+# Problem
+Air Alliance Houston currently operates a community dashboard that reports neighborhood air quality data, but this dashboard is **hard to navigate and very inaccessible**; residents often fail to visit the dashboard online to access their (potentially life-saving) analytics. This leaves many **neighbors at risk to pollutants that may directly impact their health**. Furthermore, residents have no way of automatically staying up to date with current data, and instead have to manually monitor the dashboard.  
+
+# Solution
+In replacement of their old platform, our team created dashboard that **aggregates live air quality data from ~40 monitors across Houston neighborhoods in need**. The system allows residents to **subscribe to SMS/MMS alerts** when pollutant levels exceed health thresholds, and integrates data analytics and mapping tools. 
+
+# Key Features
+- Dashboard displaying **real-time readings directly from 40 air monitors** and **2 external sensor feeds** (PurpleAir and Sensit) 
+- **User subscription system** to register contacts with phone numbver, location fields and alert preferences with automatic region inference from latitude/longitude or address 
+- Manage **SMS/MMS alerts via Celery tasks** with rate limiting, cooldown handling, and pause/unpause controls
+- Send SMS/MSS alerts via **Twilio**
+- **JWT-protected admin login** for text blasts and global and region-scoped alert pause/unpause 
+- **Dead-letter logging** and support for inspecting failed Celery tasks  
+- **Pollutant details** (name, level, and monitor location) displayed on an **interactive map**
+
+# Technical Contributions
+I worked closely with my teammate, Achraf, and my technical lead, Vismay, with building the models, serializers, api endpoints, and celery tasks. 
+
+## MODELS
+- **Domain model layer** with:
+    - Region, Person, Sensor, Metric, SensorMetricHourly, RegionMetricHourly
+    - AlertSubscription for alert rule management
+    - TextBlast for admin SMS 
+    - AlertPauseLog for pause state tracking
+    - FailedTask for retry//dead-letter diagnostics
+- Implemented **enums/choices** for: 
+    - RegionType, MetricType, ExternalAPIType, ConditionType, NotificationType, TextBlastTargetType, PauseScopeType
+- Added **performance indexes** on:
+    - metric time series, sensor lookups, subscription queries, failed task history 
+
+## SERIALIZERS
+- Built **PersonSerializer** with:
+    - region resolution from latitude and longtidue or address
+    - welcome SMS sending via Twilio
+- Implemented **SensorSerializer** and **MetricSerializer** for API payload validation
+- Added AlertSubscriptionSerializer for **admin/user subscription CRUD**
+- Added **analytics serializers**:
+    - SensorMetricHourlySerializer
+    - RegionMetricHourlySerializer
+- Built **admin serializers**:
+    - TextBlastSerializer with target_region_ids validation
+    - AlertPauseLogSerializer with scoped pause validation 
+
+## VIEWS / API ENDPOINTS 
+- Created **REST endpoints** for:
+    - CRUD on people and sensors
+    - list and create alert subscriptions
+    - raw measurements, latest readings, and aggregated time-series sensor filtering by region, nearest radius, and limit count
+- Added support for:
+    - mobile user registration and **verification flows**
+    - **Twilio STOP webhook handling** to remove subscribers
+    - **JWT-based admin auth** for text blasts and alert pause controls
+
+## TASKS 
+- Built **Celery task pipeline** for:
+    - fetch_all_sensor_data polling external sensor APIs
+    - aggregate_sensor_metric_hourly
+    - aggregate_region_metric_hourly
+    - monitor_sensor_metrics for realtime alerts
+    - send_region_alerts for aggregated region alerts
+    - send_hazard_notification with retry/dead-letter logging (end a hazard notification to a user via SMS using Twilio API)
+    - send_text_blast_task for admin broadcast messaging 
+    - drop_stale_metrics cleanup (delete raw metrics and hourly aggregations older than 24 hours)
+- Implemented **alert logic**:
+    - **Redis-backed** cooldown and daily rate limiting
+    - pause checks against Redis and DB
+    - conditional threshold evaluation based on ConditionType (less than, greater than, etc)
+
+## INTEGRATION/ INFRASTRUCTURE
+- Integrated **Twilio SMS** for:
+    - welcome messages
+    - alert notifications
+    - opt-out STOP handling
+- Used **Redis** for:
+    - caching active subscriptions
+    - cooldown enforcement
+    - alert pause state synchronization
+- Implemented **SSE (server sent events)** streaming hooks for live sensor and aggregate updates 
+
 # Tech Stack
 - **Frontend:** React, D3.js, Leaflet.js
 - **Backend:** Django, Redis, Celery
