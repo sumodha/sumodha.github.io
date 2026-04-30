@@ -65,9 +65,7 @@
 }
 
 @media (max-width: 775px) {
-    .navbar {
-        justify-content: space-around;
-    }
+  
     .hamburger {
         display: flex;
     }
