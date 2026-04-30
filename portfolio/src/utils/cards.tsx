@@ -5,8 +5,6 @@ import Breakthrough2022Content from '../projects-markdown/breakthrough-2022.mdx'
 import DigitsContent from '../projects-markdown/digits.mdx';
 import AirAllianceHoustonContent from '../projects-markdown/aah.mdx';
 import SproutContent from '../projects-markdown/sprout.mdx';
-import BCMContent from '../projects-markdown/bcm.mdx';
-import ROWLVersContent from '../projects-markdown/r-owl-vers.mdx';
 import RiceRoboticsContent from '../projects-markdown/rice-robotics.mdx';
 import ThyroidDxContent from '../projects-markdown/thyroiddx.mdx';
 import CareNetContent from '../projects-markdown/carenet.mdx';
@@ -47,19 +45,6 @@ export const cards = [
     },
     {
         type: "work",
-        slug: "sprout",
-        imgSrc: "sprout.png", 
-        title:"Sprout", 
-        role: "SOFTWARE DEVELOPER", 
-        githubLink: "", 
-        externalLink: "https://thesproutapp.com", 
-        text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
-        date: "AUG 2025 - MAY 2026",
-        skills: ["Python", "Javascript", "React Native","PostgreSQL", "Flask", "Docker"], 
-        Content: SproutContent
-    },
-    {
-        type: "work",
         slug: "nasa-suits-2025",
         imgSrc: "nasasuits.png", 
         title:"NASA SUITS", 
@@ -72,125 +57,33 @@ export const cards = [
         Content: NASASuits2025Content
     },
     {
-        type: "work",
-        slug: "bcm",
-        imgSrc: "dudoklab.png", 
-        title:"Baylor College of Medicine", 
-        role: "COMPUTATIONAL RESEARCH ASSISTANT", 
-        githubLink: "https://github.com/bdudok/LNCM-lib", 
-        externalLink: "", 
-        text: "enhanced a large biomedical signal processing codebase by developing an interactive PyQt5 GUI to synchronize EEG and video recordings via TTL pulses, reducing manual seizure review time", 
-        date: "MAY - AUG 2025",
-        skills: ["Python","OpenCV", "Matplotlib","NumPy"], 
-        Content: BCMContent
-
-    },
-    {
-        type: "leadership",
-        slug: "rice-ar-vr",
-        imgSrc: "ar.jpg", 
-        title:"Rice AR/VR", 
-        role: "PROJECT MANAGER | CO-PRESIDENT", 
-        githubLink: "", 
-        externalLink: "", 
-        text: "coordinated a team of 20+ developers, ui/ux designers and researchers to write a 30+ page research proposal; hosted workshops and industry events to promote AR/VR", 
-        date: "AUG 2025 - PRESENT",
-        skills: [], 
-        Content: RiceArVrContent
-    
-    },
-
-    {
-        type: "leadership",
-        slug: "rice-oasus",
-        imgSrc: "peereducator.webp", 
-        title:"Rice University OASUS", 
-        role: "MATH 212 PEER EDUCATOR", 
-        githubLink: "", 
-        externalLink: "https://oasus.rice.edu/", 
-        text: "worked as a peer educator for Multivariable Calculus (MATH 212)",
-        date: "JAN - MAY 2026",
-        skills: [], 
-        Content: RiceUniversityOASUSContent
-
-
-    },
-    {
-        type: "leadership",
-        slug: "rice-cs",
-        imgSrc: "ta.jpeg", 
-        title:"Rice University CS", 
-        role: "COMP 140 TA", 
-        githubLink: "", 
-        externalLink: "", 
-        text: "served as a teaching assistant for Computational Thinking (COMP 140)",
-        date: "AUG - DEC 2025",
-        skills: [], 
-        Content: RiceUniversityCSContent
-
-
-    },
-    {
-        type: "leadership",
-        slug: "breakthrough-2023",
-        imgSrc: "teacher.jpg", 
-        title:"Breakthrough", 
-        role: "TEACHING FELLOW", 
-        githubLink: "", 
-        externalLink: "https://breakthroughcollaborative.org/", 
-        text: "taught two pre-algebra classes with 10+ students at the nation’s largest pre-professional teacher program for underserved communities",
-        date: "JUN - AUG 2023",
-        skills: [],
-        Content: Breakthrough2023Content
-
-
-    },
-    {
-        type: "leadership",
-        slug: "breakthrough-2022",
-        imgSrc: "assistant.jpg", 
-        title:"Breakthrough ", 
-        role: "TEACHING ASSISTANT", 
-        githubLink: "", 
-        externalLink: "https://breakthroughcollaborative.org/", 
-        text: "volunteered as a teaching assistant for Breakthrough non-profit",
-        date: "JUN - AUG 2022",
-        skills: [], 
-        Content: Breakthrough2022Content
-
-
-    },
-    {
-        type: "projects",
-        slug: "r-owl-vers",
-        imgSrc: "robotics2.png", 
-        title:"🌟 R-OWL-vers", 
-        role: "LEAD SOFTWARE DEVELOPER", 
-        githubLink: "https://github.com/rice-robotics-club/rover-base-station-dashboard", 
-        externalLink: "", 
-        text: "a rover for the university rover challenge (URC) with robotic arm control, ArUco tag, object and sample detection; built a low-latency base station-rover streaming platform for 4 cameras", 
-        date: "AUG 2025 - PRESENT",
-        skills: ["Python", "ROS2", "WebRTC", "GStreamer", "WebSockets", "Linux", "Docker"], 
-        Content: ROWLVersContent
-        
-
-
-    },
-    {
         type: "projects",
         slug: "rice-robotics",
         imgSrc: "robotics.png", 
         title:"🌟 Rice Robotics", 
-        role: "SOFTWARE DEVELOPER", 
-        githubLink: "", 
+        role: "LEAD SOFTWARE DEVELOPER", 
+        githubLink: "https://github.com/rice-robotics-club/rover-base-station-dashboard", 
         externalLink: "", 
-        text: "a low-cost rover that autonomously explores lunar craters and lava tubes to locate and sample water deposits; worked on a Gazebo-based simulation", 
-        date: "AUG 2024 - AUG 2025",
-        skills: ["Python", "URDF", "ROS2", "Gazebo", "Ollama", "Linux", "RViz", "Docker"],
+        text: "a rover for the university rover challenge (URC) with robotic arm control, ArUco tag, object and sample detection", 
+        date: "AUG 2024 - PRESENT",
+        skills: ["Python", "URDF", "ROS2", "Gazebo", "Ollama", "Linux", "RViz", "Docker", "WebRTC", "GStreamer", "WebSockets"],
         Content: RiceRoboticsContent
         
 
 
+    },
+    {
+        type: "projects",
+        slug: "sprout",
+        imgSrc: "sprout.png", 
+        title:"🌟 Sprout", 
+        role: "SOFTWARE DEVELOPER", 
+        githubLink: "", 
+        externalLink: "https://thesproutapp.com", 
+        text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
+        date: "AUG 2025 - MAY 2026",
+        skills: ["Python", "Javascript", "React Native","PostgreSQL", "Flask", "Docker"], 
+        Content: SproutContent
     },
     {
         type: "projects",
@@ -284,6 +177,81 @@ export const cards = [
         skills: [], 
         Content: Phil318Content
     },
+    {
+        type: "leadership",
+        slug: "rice-ar-vr",
+        imgSrc: "ar.jpg", 
+        title:"Rice AR/VR", 
+        role: "PROJECT MANAGER | CO-PRESIDENT", 
+        githubLink: "", 
+        externalLink: "", 
+        text: "coordinated a team of 20+ developers, ui/ux designers and researchers to write a 30+ page research proposal; hosted workshops and industry events to promote AR/VR", 
+        date: "AUG 2025 - PRESENT",
+        skills: [], 
+        Content: RiceArVrContent
+    
+    },
+
+    {
+        type: "leadership",
+        slug: "rice-oasus",
+        imgSrc: "peereducator.webp", 
+        title:"Rice University OASUS", 
+        role: "MATH 212 PEER EDUCATOR", 
+        githubLink: "", 
+        externalLink: "https://oasus.rice.edu/", 
+        text: "worked as a peer educator for Multivariable Calculus (MATH 212)",
+        date: "JAN - MAY 2026",
+        skills: [], 
+        Content: RiceUniversityOASUSContent
+
+
+    },
+    {
+        type: "leadership",
+        slug: "rice-cs",
+        imgSrc: "ta.jpeg", 
+        title:"Rice University CS", 
+        role: "COMP 140 TA", 
+        githubLink: "", 
+        externalLink: "", 
+        text: "served as a teaching assistant for Computational Thinking (COMP 140)",
+        date: "AUG - DEC 2025",
+        skills: [], 
+        Content: RiceUniversityCSContent
+
+
+    },
+    {
+        type: "leadership",
+        slug: "breakthrough-2023",
+        imgSrc: "teacher.jpg", 
+        title:"Breakthrough", 
+        role: "TEACHING FELLOW", 
+        githubLink: "", 
+        externalLink: "https://breakthroughcollaborative.org/", 
+        text: "taught two pre-algebra classes with 10+ students at the nation’s largest pre-professional teacher program for underserved communities",
+        date: "JUN - AUG 2023",
+        skills: [],
+        Content: Breakthrough2023Content
+
+
+    },
+    {
+        type: "leadership",
+        slug: "breakthrough-2022",
+        imgSrc: "assistant.jpg", 
+        title:"Breakthrough ", 
+        role: "TEACHING ASSISTANT", 
+        githubLink: "", 
+        externalLink: "https://breakthroughcollaborative.org/", 
+        text: "volunteered as a teaching assistant for Breakthrough non-profit",
+        date: "JUN - AUG 2022",
+        skills: [], 
+        Content: Breakthrough2022Content
+
+
+    }
 
 ]
 
