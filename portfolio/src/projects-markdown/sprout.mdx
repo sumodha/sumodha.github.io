@@ -1,3 +1,65 @@
+# Key Features 
+- **User authentication and onboarding**
+    - Email/password signup and login
+    - Email verification flow for new accounts
+    - JWT-based access and refresh tokens
+    - Plan selection / SONA study onboarding path
+- **Daily mental wellness tracking**
+    - Daily mood check-in with happy/sad levels and notes
+    - Activity completion logging
+    - Emotion summary endpoints for analytics
+- **Guided wellness activities**
+    - Large library of structured exercises across many domains:
+        - gratitude, strengths, values, self-compassion, flow, kindness, mindful listening, problem solving, SMART goals, forgiveness, gratitude letters, etc.
+    - Multiple screens per activity for multi-step journeys, reflection, writing, video guidance, and completion tracking
+- **Session and event tracking**
+    - Start/end session endpoints
+    - Session event logging
+- **Push notifications and reminders**
+    - Expo push token registration
+    - Daily check-in reminder notification sender
+    - Notification handling that navigates users to the check-in screen when tapped
+    - Timezone-aware user settings
+- **Mobile app UX / navigation**
+    - Expo + React Native app with stack-based onboarding and activity flows
+    - Bottom-tab navigation for main app sections
+    - Cross-platform support via Expo
+
+# Technical Contributions
+## CI/CD PIPELINE
+Designed and implemented an end-to-end continuous deployment pipeline using **GitHub Actions**, automating the full workflow from code commit to production deployment on a DigitalOcean droplet. The pipeline (`deploy.yml`) triggers on every push to the `main` branch, building a Docker image, streaming it to the remote server via SSH, and performing a zero-downtime container swap.
+
+### Local Development Pipeline 
+Separated local and production backend environments so team members could develop and test without deploying to production. Created documentation for local backend deployment.
+
+## DEBUGGING & IMPLEMENTING FRONTEND ACTIVITIES 
+### Activities Debugged
+ 
+Investigated and resolved UI/logic issues across multiple in-app wellness activities:
+ 
+- **Gift of Time** — Fixed a layout bug where the 30-minute selection box was clipping and rendering incorrectly.
+- **Active Listening** — Debugged component rendering and interaction flow.
+- **Listening Mindfully** — Resolved display and state management issues.
+- **Creating a Gratitude Jar** — Debugged the gratitude jar activity to ensure proper functionality.
+
+
+### Activities Implemented
+ 
+Built new frontend activity screens from scratch, translating Figma designs into functional React Native components:
+ 
+- **Job Crafting** — Implemented the full quest flow for the job crafting activity.
+- **Fostering Flow** — Built the activity screen and interaction logic.
+- **Trying New Things** — Implemented the complete activity UI and behavior.
+
+
+### Codebase Contributions
+ 
+- Studied the existing frontend architecture and Figma designs to align new work with established patterns.
+- Identified that many quests were only partially implemented and prioritized completing them.
+- Began developing reusable templates/components for many different activity types to standardize future development.
+
+
+
 # Tech Stack
 - **Frontend:** React Native
 - **Backend:** Flask
