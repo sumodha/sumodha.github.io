@@ -22,7 +22,7 @@ export const cards = [
         slug: "aah",
         imgSrc: "airalliance.png", 
         title:"Air Alliance Houston", 
-        role: "FULL-STACK WEB DEVELOPER", 
+        role: "SOFTWARE DEVELOPER", 
         githubLink: "https://github.com/rice-apps/aa-dashboard", 
         externalLink: "", 
         text: "rebuilt an existing, inaccessible dashboard, visualizing real-time air quality data from 40+ Houston monitoring stations for 10,000+ residents", 
