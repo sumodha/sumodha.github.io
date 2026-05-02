@@ -64,7 +64,7 @@ export const cards = [
         role: "LEAD SOFTWARE DEVELOPER", 
         githubLink: "https://github.com/rice-robotics-club/rover-base-station-dashboard", 
         externalLink: "", 
-        text: "a rover for the university rover challenge (URC) with robotic arm control, ArUco tag, object and sample detection", 
+        text: "two rovers: lunar and mars!", 
         date: "AUG 2024 - PRESENT",
         skills: ["Python", "URDF", "ROS2", "Gazebo", "Ollama", "Linux", "RViz", "Docker", "WebRTC", "GStreamer", "WebSockets"],
         Content: RiceRoboticsContent
