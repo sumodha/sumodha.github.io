@@ -5,3 +5,13 @@ Block:
 
 Center:
 <Center> content </Center> 
+
+<ImageCarousel
+  images={[
+    { src: "/photos/one.jpg", alt: "First shot" },
+    { src: "/photos/two.jpg", alt: "Second shot" },
+    { src: "/photos/three.jpg", alt: "Third shot" },
+  ]}
+  height={550}
+  width={400}
+/>
