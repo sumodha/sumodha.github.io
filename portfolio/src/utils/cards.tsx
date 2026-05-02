@@ -185,7 +185,7 @@ export const cards = [
         role: "PROJECT MANAGER | CO-PRESIDENT", 
         githubLink: "", 
         externalLink: "", 
-        text: "coordinated a team of 20+ developers, ui/ux designers and researchers to write a 30+ page research proposal; hosted workshops and industry events to promote AR/VR", 
+        text: "served as Rice AR VR president, as well as, project manager for the NASA SUITS team", 
         date: "AUG 2025 - PRESENT",
         skills: [], 
         Content: RiceArVrContent
