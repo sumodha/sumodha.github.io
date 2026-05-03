@@ -11,7 +11,7 @@
 .skills-subtitle{
     font-family: 'Canela';
     font-style: italic;
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
     text-align: left;
 
 }
@@ -38,6 +38,36 @@
     margin-block-start: 0.7rem;
     margin-block-end: 0.7rem;
   
+}
+
+@media (max-width: 1400px) {
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-subtitle{
+        text-align: center;
+    }
+    .skills-frameworks {
+        justify-content: center;
+    }
+
+   
+    .skills-languages {
+        justify-content: center;
+    }
+
+    .skills-libraries .skill-title{
+    text-align: center;
+    }
+
+    .skills-developer {
+        justify-content: center;
+    }
+
+    .skills-libraries {
+        justify-items: center;
+    }
 }
 
 @media (max-width: 800px) {
