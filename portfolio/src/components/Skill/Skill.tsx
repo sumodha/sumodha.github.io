@@ -8,7 +8,7 @@ type SkillProps = {
 function Skill ({icon : Icon, title} : SkillProps) {
     return (
         <div className="skill">
-        <Icon size={77} color='black'></Icon>
+        <Icon className="skill-icon" color='black'></Icon>
         <h3 className="skill-title">{title}</h3>
         </div>
     );

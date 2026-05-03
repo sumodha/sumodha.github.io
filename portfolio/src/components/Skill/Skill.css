@@ -4,7 +4,25 @@
     align-items: center;
     justify-content: center;
 }
+
+.skill-icon {
+    width: clamp(50px, 8vw, 77px);
+    height: clamp(50px, 8vw, 77px);
+}
+
 .skill-title {
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
     text-align: center;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .skill-icon {
+        width: clamp(40px, 10vw, 60px);
+        height: clamp(40px, 10vw, 60px);
+    }
+
+    .skill-title {
+        font-size: 0.85rem;
+    }
 }
