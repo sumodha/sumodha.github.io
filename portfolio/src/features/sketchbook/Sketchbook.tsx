@@ -127,7 +127,7 @@ export default function Sketchbook() {
 
           {/* ── back cover (always present under the pages on the right) ── */}
           <div className="sketchbook__back-cover">
-            <span className="sketchbook__cover-text">SUMODHA POKHREL</span>
+            <span className="sketchbook__cover-text">THE END.</span>
           </div>
 
           {/* ── page 0: the front cover ── */}
