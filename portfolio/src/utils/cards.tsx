@@ -14,9 +14,35 @@ import RiceUniversityOASUSContent from '../projects-markdown/rice-oasus.mdx';
 import RiceUniversityCSContent from '../projects-markdown/rice-cs.mdx';
 import Phil318Content from '../projects-markdown/phil-318.mdx';
 import AbstractThoughtsContent from '../projects-markdown/abstract-thoughts.mdx';
-
+import VertexContent from '../projects-markdown/vertex.mdx';
 
 export const cards = [
+    {
+        type: "work",
+        slug: "vertex",
+        imgSrc: "vertex.png", 
+        title:"Vertex", 
+        role: "SOFTWARE DEVELOPER", 
+        githubLink: "", 
+        externalLink: "https://www.vertexinc.com/", 
+        text: "", 
+        date: "MAY 2026 - AUG 2026",
+        skills: ["Python", "Java", "Apache Flink", "Apache Pulsar","PostgreSQL", "Snowflake", "Docker"], 
+        Content: VertexContent
+    },
+    {
+        type: "work",
+        slug: "sprout",
+        imgSrc: "sprout.png", 
+        title:"Sprout", 
+        role: "SOFTWARE DEVELOPER", 
+        githubLink: "", 
+        externalLink: "https://thesproutapp.com", 
+        text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
+        date: "JAN 2026 - MAY 2026",
+        skills: ["Python", "Javascript", "React Native","PostgreSQL", "Flask", "Docker"], 
+        Content: SproutContent
+    },
     {
         type: "work",
         slug: "aah",
@@ -26,15 +52,15 @@ export const cards = [
         githubLink: "https://github.com/rice-apps/aa-dashboard", 
         externalLink: "", 
         text: "rebuilt an existing, inaccessible dashboard, visualizing real-time air quality data from 40+ Houston monitoring stations for 10,000+ residents", 
-        date: "AUG 2025 - MAY 2026",
+        date: "AUG 2025 - DEC 2025",
         skills: ["Python", "TypeScript", "React", "Django", "Figma", "PostgreSQL"], 
         Content: AirAllianceHoustonContent
     },
     {
-        type: "work",
+        type: "projects",
         slug: "nasa-suits-2026",
         imgSrc: "nasasuits-2026.png", 
-        title:"NASA SUITS", 
+        title:"🌟 NASA SUITS", 
         role: "LEAD SOFTWARE DEVELOPER", 
         githubLink: "https://github.com/Rice-ARVR/OWL-SUITS-2026-PR", 
         externalLink: "", 
@@ -44,10 +70,10 @@ export const cards = [
         Content: NASASuits2026Content
     },
     {
-        type: "work",
+        type: "projects",
         slug: "nasa-suits-2025",
         imgSrc: "nasasuits.png", 
-        title:"NASA SUITS", 
+        title:"🌟 NASA SUITS", 
         role: "AUGMENTED REALITY SOFTWARE DEVELOPER", 
         githubLink: "https://github.com/OWL-SUITS-2025/Owl_SUITS_2025", 
         externalLink: "https://www.nasa.gov/centers-and-facilities/johnson/nasa-challenge-wraps-student-teams-complete-space-suit-challenges/", 
@@ -74,22 +100,9 @@ export const cards = [
     },
     {
         type: "projects",
-        slug: "sprout",
-        imgSrc: "sprout.png", 
-        title:"🌟 Sprout", 
-        role: "SOFTWARE DEVELOPER", 
-        githubLink: "", 
-        externalLink: "https://thesproutapp.com", 
-        text: "improved a mobile wellness app for college students by streamlining CI/CD pipelines and delivering new in-app activities to 100+ users", 
-        date: "AUG 2025 - MAY 2026",
-        skills: ["Python", "Javascript", "React Native","PostgreSQL", "Flask", "Docker"], 
-        Content: SproutContent
-    },
-    {
-        type: "projects",
         slug: "thyroiddx",
         imgSrc: "thyroiddx.png", 
-        title:"🌟 thyroidDx", 
+        title:"thyroidDx", 
         role: "", 
         githubLink: "https://github.com/sumodha/thyroidDx", 
         externalLink: "https://thyroiddx.onrender.com", 
