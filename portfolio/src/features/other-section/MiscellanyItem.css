@@ -130,7 +130,7 @@ a:focus-visible > .miscellany-item .miscellany-overlay {
     color: var(--foreground);
     position: relative;
     background: none;
-    padding: 0.8125rem 0.125rem 1.125rem;
+    padding: 0.8125rem 1rem 1.125rem;
   }
 
   .miscellany-category,
