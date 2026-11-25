@@ -1,0 +1,25 @@
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.4375rem 0 0 -0.4375rem;
+}
+
+.contact-icons a {
+  display: grid;
+  place-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  color: var(--foreground);
+  transition: scale 200ms ease;
+}
+
+.contact-icons svg {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+
+.contact-icons a:hover,
+.contact-icons a:focus-visible {
+  scale: 1.1;
+}

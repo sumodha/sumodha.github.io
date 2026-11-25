@@ -1,0 +1,27 @@
+.text-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.text-links a {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: #a0a0a0;
+  text-underline-offset: 0.3125rem;
+  transition: scale 180ms ease, text-decoration-color 200ms ease, color 200ms ease;
+}
+
+.text-links a:hover {
+  color: var(--foreground);
+  text-decoration-color: var(--foreground);
+  scale: 1.05;
+}
+
+.text-links--compact {
+  gap: 0.625rem 1rem;
+  margin-top: 0.625rem;
+  font-weight: inherit;
+}

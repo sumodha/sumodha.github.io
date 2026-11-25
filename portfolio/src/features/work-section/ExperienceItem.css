@@ -1,0 +1,213 @@
+.experience-row {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  column-gap: 1.75rem;
+  padding: 1.125rem 0;
+}
+
+.experience-row:first-child {
+  padding-top: 0;
+}
+
+.experience-row + .experience-row {
+  border-top: var(--border-width) solid var(--line);
+}
+
+.company-logo {
+  width: 8rem;
+  height: 8rem;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 0.125rem;
+}
+
+.company-logo--vertex {
+  background-size: 120%;
+}
+
+.company-logo--aah {
+  background-size: 72%;
+}
+
+.experience-topline {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.experience-topline h3 {
+  font-size: 1.125rem;
+  font-weight: inherit;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.experience-info {
+  min-width: 0;
+}
+
+.experience-meta {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+}
+
+.experience-toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  transition: scale 180ms ease;
+}
+
+.experience-toggle:hover {
+  scale: 1.12;
+}
+
+.experience-toggle svg {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  transition: transform 250ms ease;
+}
+
+.experience-toggle[aria-expanded=true] svg {
+  transform: rotate(180deg);
+}
+
+.experience-date {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.experience-company {
+  display: inline-block;
+  text-decoration: underline;
+  text-decoration-color: #aaa;
+  text-underline-offset: 0.3125rem;
+  text-decoration-thickness: 0.0625rem;
+  transition: scale 180ms ease, text-decoration-color 200ms;
+}
+
+.experience-company:hover {
+  scale: 1.04;
+  text-decoration-color: var(--foreground);
+}
+
+.experience-description,
+.experience-detail-text {
+  max-width: 40rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.experience-description {
+  color: var(--muted);
+  font-style: italic;
+  margin: 0.3125rem 0 0;
+}
+
+.experience-skills {
+  margin: 0.625rem 0 0;
+}
+
+.experience-disclosure {
+  --disclosure-bleed: 1.25rem;
+  /* Leave room for shadows and focus rings inside the animated clipping area. */
+  margin-inline: calc(-1 * var(--disclosure-bleed));
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition: grid-template-rows 300ms ease, opacity 200ms ease, visibility 300ms;
+}
+
+.experience-row--expanded .experience-disclosure {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+}
+
+.experience-expanded {
+  --experience-gallery-width: 20rem;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, var(--experience-gallery-width)) minmax(0, 1fr);
+  align-items: start;
+  gap: 1.5rem;
+  padding: 0 var(--disclosure-bleed);
+  transition: padding 300ms ease;
+}
+
+.experience-row--expanded .experience-expanded {
+  padding-block: 1rem 0.75rem;
+}
+
+.experience-expanded--text-only {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.experience-detail-text {
+  color: var(--foreground);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.experience-detail-copy {
+  min-width: 0;
+}
+
+.experience-gallery {
+  justify-self: start;
+  width: 100%;
+  max-width: var(--experience-gallery-width);
+  margin: 0;
+  min-width: 0;
+  padding: 0 0 0.5rem;
+}
+
+@media (max-width: 50em) {
+  .experience-expanded {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 40.625em) {
+  .experience-row {
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .company-logo {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .experience-topline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+
+  .experience-date {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 23.75em) {
+  .experience-row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.75rem;
+  }
+}

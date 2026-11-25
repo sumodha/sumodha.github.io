@@ -1,0 +1,179 @@
+.carousel-controls {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.carousel-arrow {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  transition: scale 180ms ease, background-color 180ms ease;
+}
+
+.carousel-arrow:hover {
+  scale: 1.1;
+}
+
+.carousel-controls .carousel-indicators {
+  display: flex;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+
+.carousel-controls .carousel-indicators > li {
+  min-width: 0;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.carousel-indicators button {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  transition: scale 180ms ease;
+}
+
+.carousel-indicators button span {
+  transition: background-color 200ms ease;
+}
+
+/* Story carousels keep their controls over the photo. */
+.carousel-controls--overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.carousel-controls--overlay button {
+  pointer-events: auto;
+}
+
+.carousel-controls--overlay .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  background: #0008;
+  backdrop-filter: blur(0.25rem);
+}
+
+.carousel-controls--overlay .carousel-arrow--left {
+  left: 0.5rem;
+}
+
+.carousel-controls--overlay .carousel-arrow--right {
+  right: 0.5rem;
+}
+
+.carousel-controls--overlay .carousel-arrow svg {
+  width: 1.1875rem;
+  height: 1.1875rem;
+}
+
+.carousel-controls--overlay .carousel-arrow:hover {
+  background: #000b;
+}
+
+.carousel-controls--overlay .carousel-indicators {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 50%;
+  translate: -50% 0;
+  max-width: calc(100% - 1.5rem);
+  overflow-x: auto;
+  padding: 0 0.25rem;
+  border-radius: 1.25rem;
+  background: #0006;
+  pointer-events: auto;
+}
+
+.carousel-controls--overlay .carousel-indicators button {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.carousel-controls--overlay .carousel-indicators button span {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: #fff7;
+}
+
+.carousel-controls--overlay .carousel-indicators button[aria-current=true] span {
+  background: #fff;
+}
+
+.carousel-controls--overlay .carousel-indicators button:hover {
+  scale: 1.2;
+}
+
+.carousel-controls--overlay button:focus-visible {
+  outline: 0.125rem solid #fff;
+  outline-offset: -0.1875rem;
+}
+
+/* Experience carousels place progress controls below the caption. */
+.carousel-controls--progress {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: 0.375rem;
+}
+
+.carousel-controls--progress .carousel-arrow {
+  background: var(--foreground);
+}
+
+.carousel-controls--progress .carousel-arrow:hover {
+  background: #333;
+}
+
+.carousel-controls--progress .carousel-arrow svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.carousel-controls--progress .carousel-indicators {
+  flex: 1;
+  gap: 0.375rem;
+}
+
+.carousel-controls--progress .carousel-indicators > li {
+  flex: 1;
+}
+
+.carousel-controls--progress .carousel-indicators button {
+  width: 100%;
+  height: 2rem;
+}
+
+.carousel-controls--progress .carousel-indicators button span {
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 0.25rem;
+  background: var(--line);
+}
+
+.carousel-controls--progress .carousel-indicators button[aria-current=true] span {
+  background: var(--foreground);
+}
+
+.carousel-controls--progress .carousel-indicators button:hover {
+  scale: 1.04;
+}
+
+.carousel-controls--progress button:focus-visible {
+  outline-offset: 0.1875rem;
+}

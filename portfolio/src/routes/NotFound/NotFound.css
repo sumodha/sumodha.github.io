@@ -1,0 +1,139 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  gap: 1.25rem;
+  padding: 3.125rem 0 4rem;
+}
+
+.not-found__card {
+  margin: 0;
+  width: 23.125rem;
+  height: 12.5rem;
+  background: #000;
+  border-radius: 0.9375rem;
+  box-shadow: var(--shadow-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.not-found__starfield {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(0.0625rem 0.0625rem at 1.875rem 2.5rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 5rem 7.5rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 9.375rem 1.875rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 12.5rem 10rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 16.25rem 3.75rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 19.375rem 8.75rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 21.25rem 1.25rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 3.125rem 10.625rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 8.125rem 5.625rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 14.375rem 6.875rem, #fff 50%, transparent),
+    radial-gradient(0.0625rem 0.0625rem at 18.125rem 11.25rem, #fff 50%, transparent),
+    radial-gradient(0.075rem 0.075rem at 10.625rem 9.375rem, #8e8e93 50%, transparent),
+    radial-gradient(0.075rem 0.075rem at 21.875rem 5rem, #8e8e93 50%, transparent);
+  animation: not-found-drift 60s linear infinite;
+}
+
+.not-found__astronaut {
+  display: block;
+  animation: not-found-float 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.not-found__tether {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 50%;
+  width: 0.09375rem;
+  height: 3.125rem;
+  background: linear-gradient(to bottom, #8e8e93, transparent);
+  transform-origin: top center;
+  animation: not-found-sway 5s ease-in-out infinite;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.not-found__code {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--foreground);
+  margin: 0.5rem 0 0;
+}
+
+.not-found__btn {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  border: none;
+  padding: 0.5rem 1.125rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-elevated);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 200ms;
+  margin-top: 0.25rem;
+}
+
+.not-found__btn:hover {
+  transform: scale(1.05);
+}
+
+@keyframes not-found-drift {
+  to {
+    transform: translateY(-6.25rem);
+  }
+}
+
+@keyframes not-found-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-0.875rem) rotate(3deg);
+  }
+}
+
+@keyframes not-found-sway {
+  0%,
+  100% {
+    transform: rotate(6deg);
+  }
+
+  50% {
+    transform: rotate(-6deg);
+  }
+}
+
+.not-found__astronaut svg {
+  display: block;
+  width: 6.25rem;
+  height: 7.5rem;
+}
+
+@media (max-width: 26.25em) {
+  .not-found__card {
+    width: 100%;
+  }
+
+  .not-found__code {
+    font-size: 3rem;
+  }
+}

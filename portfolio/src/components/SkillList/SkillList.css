@@ -1,0 +1,20 @@
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-label {
+  display: inline-block;
+  padding: 0.4375rem 0.625rem;
+  border: var(--border-width) solid var(--foreground);
+  border-radius: 0;
+  color: var(--foreground);
+  background: none;
+  font-size: 0.875rem;
+  font-weight: inherit;
+  line-height: 1.2;
+}

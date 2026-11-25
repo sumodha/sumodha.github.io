@@ -1,0 +1,92 @@
+.navbar {
+  font-family: var(--font-body);
+  padding: 1.8125rem 0 1.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-name {
+  transition: scale 180ms ease;
+  font-size: 1.25rem;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.navbar nav {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.navbar-links {
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.navbar-links a {
+  display: inline-block;
+  padding: 0.625rem 0;
+  position: relative;
+  color: var(--muted);
+  transition: scale 180ms ease, color 200ms;
+}
+
+.navbar-links a:hover,
+.navbar-links a[aria-current] {
+  color: var(--foreground);
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.1875rem;
+  height: 0.0625rem;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms;
+}
+
+.navbar-links a[aria-current]::after,
+.navbar-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar a:hover {
+  scale: 1.05;
+}
+
+@media (max-width: 40.625em) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.375rem;
+    padding: 1.5rem 0 1.25rem;
+  }
+
+  .navbar-links {
+    gap: 0.5rem 1.625rem;
+    font-size: 0.9375rem;
+  }
+
+  .navbar-name {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .navbar-links {
+    gap: 0.5rem 1.25rem;
+  }
+}
